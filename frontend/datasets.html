@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Open Dataset Catalog — Quad Analytics</title>
+<meta content="Open Dataset Catalog on Quad Analytics" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main class="container">
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<span>Dataset Catalog</span>
+</div>
+<h1 class="display-md">Open Dataset Catalog &amp; Explorer</h1>
+<p class="body-sm mt-8">Explore the underlying datasets powering our models. Inspect column schemas, distribution summaries, and live records directly in your browser.</p>
+</div>
+<!-- Dataset selector toolbar -->
+<div class="dataset-wrap mb-48">
+<div class="dataset-toolbar">
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+<label for="dataset-model-select" style="font-size:0.82rem;font-weight:700">Select Dataset:</label>
+<select class="field-select" id="dataset-model-select" style="width:260px;height:36px;font-size:0.82rem">
+<option value="diabetes">Diabetes Clinical Cohort (PIMA)</option>
+<option value="breast-cancer">Oncology Risk Dataset (1,500 Cohort)</option>
+<option value="car-price">Quikr Used Car Marketplace</option>
+<option value="ipl-score">IPL Delivery Telemetry (Kaggle)</option>
+</select>
+</div>
+<div class="dataset-search">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input id="dataset-search-input" placeholder="Search rows..." type="text"/>
+</div>
+</div>
+<div id="dataset-summary-stats" style="padding:20px 24px;border-bottom:1px solid var(--border);background:var(--surface-alt);display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+<!-- populated dynamically -->
+</div>
+<div class="dataset-preview-wrap" id="dataset-table-container">
+<!-- populated dynamically -->
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

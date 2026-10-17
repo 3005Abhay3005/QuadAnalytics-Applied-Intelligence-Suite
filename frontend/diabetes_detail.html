@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diabetes Risk Predictor — Quad Analytics</title>
+<meta content="Quad Analytics — Applied Machine Learning Platform" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main>
+<section class="model-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<span>Model 01</span>
+<span>›</span>
+<span>Clinical</span>
+</div>
+<div class="model-hero-inner">
+<div>
+<p class="model-hero-tag">Model 01 — Clinical</p>
+<h1>Diabetes Risk Predictor</h1>
+<p class="lead">An SVM classifier that uses six clinical biomarkers to assess the probability of Type 2 diabetes onset. Trained on the PIMA Indian Diabetes Dataset with full feature attribution at every inference step.</p>
+<div class="model-hero-actions">
+<a class="btn btn-primary btn-lg" href="/diabetes.html">Launch Model</a>
+<a class="btn btn-secondary" href="/datasets.html">Dataset Catalog</a>
+</div>
+</div>
+<div class="model-metrics-grid">
+<div class="model-metric">
+<div class="mv">78.5%</div>
+<div class="ml">Test accuracy (SVM linear)</div>
+</div>
+<div class="model-metric">
+<div class="mv">0.83</div>
+<div class="ml">ROC-AUC on held-out set</div>
+</div>
+<div class="model-metric">
+<div class="mv">614</div>
+<div class="ml">Training samples</div>
+</div>
+<div class="model-metric">
+<div class="mv">6</div>
+<div class="ml">Clinical biomarkers</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main content -->
+<section class="section">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start">
+<!-- Prose -->
+<div class="prose">
+<h2>Introduction</h2>
+<p>The Diabetes Risk Predictor is a binary classification model built to estimate an individual's likelihood of having or developing Type 2 diabetes. It is trained on the Pima Indian Diabetes Database — a benchmark dataset originally collected by the National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) in the United States.</p>
+<p>The model takes six clinical biomarkers as input and outputs a probability score alongside a binary classification label. Alongside the prediction, each result includes a feature attribution breakdown, identifying which input features contributed most strongly — and in which direction — to the decision.</p>
+<div class="note"><p>This tool is intended for academic and educational use only. It does not constitute medical advice. Clinical decisions must always involve qualified healthcare professionals.</p></div>
+<h2>Dataset Overview</h2>
+<p>The Pima Indian Diabetes Dataset contains 768 records of female patients, all of Pima Indian heritage, at least 21 years of age. It was originally collected by the NIDDK as part of a long-running longitudinal study of diabetes onset in a high-prevalence population group.</p>
+<p>Each row in the dataset corresponds to one patient, and includes the following features: number of pregnancies, plasma glucose concentration (measured two hours after an oral glucose tolerance test), diastolic blood pressure, serum insulin level (measured two hours post-load), body mass index, and age in years. The target variable is a binary outcome: 1 indicates a diabetes diagnosis made within five years of measurement; 0 indicates no diagnosis.</p>
+<h3>Key Dataset Facts</h3>
+<ul>
+<li>768 total records; 500 negative (65%), 268 positive (35%)</li>
+<li>No missing values after preprocessing (zero-value imputation applied to physiological columns)</li>
+<li>6 input features: Pregnancies, Glucose, BloodPressure, Insulin, BMI, Age</li>
+<li>Feature with highest correlation to outcome: Glucose (r = 0.47)</li>
+<li>Training split: 80% train / 20% test (stratified)</li>
+</ul>
+<h2>Machine Learning Methodology</h2>
+<p>The model uses a Support Vector Machine (SVM) with a linear kernel, implemented via scikit-learn's <code>SVC(kernel='linear', probability=True)</code>. Prior to training, all features are standardized using <code>StandardScaler</code> to have zero mean and unit variance — a necessary step for SVM, which is sensitive to feature scale.</p>
+<p>Feature importance in an SVM context is computed from the signed coefficients of the decision hyperplane. A large positive coefficient indicates that higher values of the feature push the prediction toward the positive class (diabetic); a large negative coefficient indicates the opposite. Glucose dominates with a coefficient magnitude of 0.987, followed by BMI at 0.543.</p>
+<h3>Training Pipeline</h3>
+<ul>
+<li>Input validation and zero-value imputation for physiologically implausible readings</li>
+<li>StandardScaler fit on training data only; applied to both train and test sets</li>
+<li>SVM trained with linear kernel, C=1.0, probability=True for confidence estimation</li>
+<li>Evaluated using accuracy, F1-score, ROC-AUC, and confusion matrix on a held-out 20% test set</li>
+</ul>
+<h3>Explainability</h3>
+<p>Feature attributions are computed at inference time using the formula: attribution = coefficient × z-score. This gives the signed contribution of each input feature to the raw decision score, in comparable units across features. The contributions are returned for every prediction and displayed as a horizontal bar chart in the inference interface.</p>
+</div>
+<!-- Sidebar specs -->
+<div style="position:sticky;top:calc(var(--nav-h) + 24px)">
+<div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+<div class="panel-header">
+<h2>Technical Specifications</h2>
+</div>
+<div class="panel-body">
+<table class="spec-table">
+<tr><td>Task Type</td><td>Binary Classification</td></tr>
+<tr><td>Algorithm</td><td>SVC (linear kernel)</td></tr>
+<tr><td>Library</td><td>scikit-learn 1.x</td></tr>
+<tr><td>Training Samples</td><td>614 (80%)</td></tr>
+<tr><td>Test Samples</td><td>154 (20%)</td></tr>
+<tr><td>Accuracy</td><td>78.5%</td></tr>
+<tr><td>F1-Score</td><td>0.71</td></tr>
+<tr><td>ROC-AUC</td><td>0.83</td></tr>
+<tr><td>Features</td><td>6 clinical biomarkers</td></tr>
+<tr><td>Scaler</td><td>StandardScaler</td></tr>
+<tr><td>Serialization</td><td>joblib</td></tr>
+</table>
+</div>
+<div class="panel-footer">
+<a class="btn btn-primary" href="/diabetes.html" style="width:100%">Launch Inference</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDA Charts -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:0">
+<div class="container">
+<div class="section-header">
+<span class="label">Exploratory Data Analysis</span>
+<h2 class="display-md mt-8">Understanding the data<br/>behind the model.</h2>
+</div>
+<div class="charts-grid" id="chartsGrid-diabetes">
+<div class="chart-panel">
+<h3>Feature Distribution</h3>
+<p class="chart-desc">Distribution of primary features across the training dataset, showing spread and central tendency.</p>
+<div class="chart-h-md"><canvas id="chart-dist-diabetes"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Feature Importance</h3>
+<p class="chart-desc">Relative importance of each input feature as determined by the trained model.</p>
+<div class="chart-h-md"><canvas id="chart-importance-diabetes"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Class / Target Distribution</h3>
+<p class="chart-desc">Distribution of the target variable across the dataset, illustrating class balance.</p>
+<div class="chart-h-sm"><canvas id="chart-target-diabetes"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Correlation Heatmap (Key Features)</h3>
+<p class="chart-desc">Pairwise correlation coefficients between the most important input features.</p>
+<div class="chart-h-sm"><canvas id="chart-corr-diabetes"></canvas></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="container">
+<div class="cta-banner">
+<div>
+<h2>Try the Diabetes Risk Predictor now.</h2>
+<p>Input real values, get an instant prediction with confidence scores and a full explanation of which features drove the result.</p>
+</div>
+<a class="btn btn-white btn-lg" href="/diabetes.html">Open Model</a>
+</div>
+</div>
+</main>
+<script>
+  
+(function() {
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  const gridColor = 'rgba(150,150,140,0.12)';
+  const fontColor = '#909090';
+  Chart.defaults.color = fontColor;
+
+  // Feature Distribution (bar: mean values)
+  new Chart(document.getElementById('chart-dist-diabetes'), {
+    type: 'bar',
+    data: {
+      labels: ['Pregnancies', 'Glucose', 'Blood Pressure', 'Insulin', 'BMI', 'Age'],
+      datasets: [{
+        label: 'Mean value (positive)', data: [4.9, 141.3, 70.8, 100.3, 35.1, 37.1],
+        backgroundColor: 'rgba(15,15,15,0.75)', borderRadius: 4
+      },{
+        label: 'Mean value (negative)', data: [3.3, 109.9, 68.2, 68.8, 30.3, 31.2],
+        backgroundColor: 'rgba(150,150,140,0.3)', borderRadius: 4
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top' } }, scales: { y: { grid: { color: gridColor } }, x: { grid: { display: false } } } }
+  });
+
+  // Feature Importance
+  new Chart(document.getElementById('chart-importance-diabetes'), {
+    type: 'bar',
+    data: {
+      labels: ['Glucose', 'BMI', 'Pregnancies', 'Blood Pressure', 'Insulin', 'Age'],
+      datasets: [{ data: [0.987, 0.543, 0.340, 0.191, 0.056, 0.016], backgroundColor: 'rgba(15,15,15,0.8)', borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { color: gridColor } }, y: { grid: { display: false } } } }
+  });
+
+  // Target Distribution
+  new Chart(document.getElementById('chart-target-diabetes'), {
+    type: 'doughnut',
+    data: {
+      labels: ['No Diabetes (0)', 'Diabetes (1)'],
+      datasets: [{ data: [500, 268], backgroundColor: ['rgba(15,15,15,0.15)', 'rgba(15,15,15,0.75)'], borderWidth: 0 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }
+  });
+
+  // Correlation (radar)
+  new Chart(document.getElementById('chart-corr-diabetes'), {
+    type: 'radar',
+    data: {
+      labels: ['Glucose', 'BMI', 'Pregnancies', 'Insulin', 'BP', 'Age'],
+      datasets: [{
+        label: 'Correlation with target', data: [0.47, 0.29, 0.22, 0.13, 0.07, 0.24],
+        borderColor: 'rgba(15,15,15,0.8)', backgroundColor: 'rgba(15,15,15,0.1)', pointRadius: 3
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, scales: { r: { grid: { color: gridColor }, min: 0, max: 0.6 } }, plugins: { legend: { display: false } } }
+  });
+})();
+
+  </script>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

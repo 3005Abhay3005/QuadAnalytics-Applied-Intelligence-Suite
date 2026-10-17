@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Applied Intelligence Suite — Quad Analytics</title>
+<meta content="Quad Analytics — Applied Machine Learning Platform" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<!-- <div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div> -->
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main>
+<!-- Hero -->
+<section class="hero">
+<div class="container">
+<span class="hero-eyebrow">Applied Intelligence Suite</span>
+<h1 class="display-xl">Machine Learning <br/>& Predictive Analytics</h1>
+<p>Four production-ready predictive models across clinical medicine, automotive finance, and sports analytics. Built with transparency, explainability, and rigorous validation at every step.</p>
+<div class="hero-actions">
+<a class="btn btn-primary btn-lg" href="#models">Explore Models</a>
+
+</div>
+</div>
+</section>
+<!-- Stats -->
+<section class="section-sm">
+<div class="container">
+<div class="stats-row">
+<div class="stat-cell">
+<div class="stat-value">4</div>
+<div class="stat-label">Production-grade models across four domains</div>
+</div>
+<div class="stat-cell">
+<div class="stat-value">95%</div>
+<div class="stat-label">Peak accuracy on clinical risk prediction</div>
+</div>
+<div class="stat-cell">
+<div class="stat-value">80K+</div>
+<div class="stat-label">Training samples used across all models</div>
+</div>
+<div class="stat-cell">
+<div class="stat-value">REST</div>
+<div class="stat-label">Open API with full JSON documentation</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider container"></div>
+<!-- What This Platform Does -->
+<section class="section">
+<div class="container">
+<div class="section-header">
+<span class="label">Platform Purpose</span>
+<h2 class="display-md mt-8">Built for researchers, educators,<br/>and engineers.</h2>
+</div>
+<div class="use-cases">
+<div class="use-case">
+<h3>Clinical Decision Support</h3>
+<p>Our diabetes and oncology models are trained on peer-reviewed population datasets. They surface statistically-driven risk assessments with full explainability — so practitioners understand exactly which biomarkers drive each prediction.</p>
+</div>
+<div class="use-case">
+<h3>Automotive Asset Valuation</h3>
+<p>The car price estimator combines gradient-boosted regression with a rich feature schema — fuel type, brand tier, age, mileage, and transmission — to deliver residual-value estimates grounded in real market transaction data from Quikr.</p>
+</div>
+<div class="use-case">
+<h3>Live Sports Intelligence</h3>
+<p>The IPL Score Forecaster applies regression over historical match telemetry to estimate first-innings totals in real time. Inputs include batting team, bowling team, current run rate, wickets fallen, and overs bowled.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider container"></div>
+<!-- Model Grid -->
+<section class="section" id="models">
+<div class="container">
+<div class="section-header">
+<span class="label">Model Registry</span>
+<h2 class="display-md mt-8">Four models. Four domains.<br/>One platform.</h2>
+</div>
+<div class="model-index-grid">
+<a class="model-index-item" href="/diabetes_detail.html">
+<span class="mi-number">Model 01 — Clinical</span>
+<span class="mi-name">Diabetes Risk Predictor</span>
+<p class="mi-desc">An SVM classifier trained on the PIMA Indian Diabetes Dataset. Uses six clinical biomarkers to quantify an individual's probability of developing Type 2 diabetes.</p>
+<div class="mi-meta">
+<span><strong>Algorithm</strong> Support Vector Machine</span>
+<span><strong>Accuracy</strong> 78.5%</span>
+<span><strong>Training Set</strong> 614 samples</span>
+</div>
+<span class="mi-arrow">View model details →</span>
+</a>
+<a class="model-index-item" href="/breast_cancer_detail.html">
+<span class="mi-number">Model 02 — Oncology</span>
+<span class="mi-name">Breast Cancer Risk Screener</span>
+<p class="mi-desc">A Random Forest classifier using lifestyle and genetic risk factors to estimate the probability of breast cancer. Trained on a validated 1,500-patient oncology cohort.</p>
+<div class="mi-meta">
+<span><strong>Algorithm</strong> Random Forest</span>
+<span><strong>Accuracy</strong> 95.4%</span>
+<span><strong>Training Set</strong> 1,500 samples</span>
+</div>
+<span class="mi-arrow">View model details →</span>
+</a>
+<a class="model-index-item" href="/car_price_detail.html">
+<span class="mi-number">Model 03 — Automotive</span>
+<span class="mi-name">Used Car Price Estimator</span>
+<p class="mi-desc">A gradient-boosted regression model that estimates pre-owned vehicle market value based on make, year, fuel type, transmission, and odometer readings.</p>
+<div class="mi-meta">
+<span><strong>Algorithm</strong> Random Forest Regressor</span>
+<span><strong>R²</strong> 0.89</span>
+<span><strong>Training Set</strong> 892 records</span>
+</div>
+<span class="mi-arrow">View model details →</span>
+</a>
+<a class="model-index-item" href="/ipl_detail.html">
+<span class="mi-number">Model 04 — Sports Analytics</span>
+<span class="mi-name">IPL Score Forecaster</span>
+<p class="mi-desc">A regression model trained on 76,000+ IPL deliveries from Kaggle. Predicts first-innings total given mid-match state: teams, overs, wickets, and current run rate.</p>
+<div class="mi-meta">
+<span><strong>Algorithm</strong> Random Forest Regressor</span>
+<span><strong>MAE</strong> ~8.2 runs</span>
+<span><strong>Training Set</strong> 76K rows</span>
+</div>
+<span class="mi-arrow">View model details →</span>
+</a>
+</div>
+</div>
+</section>
+<div class="section-divider container"></div>
+<!-- How It Works -->
+<section class="section">
+<div class="container">
+<div class="section-header">
+<span class="label">Methodology</span>
+<h2 class="display-md mt-8">From raw data to explainable prediction.</h2>
+</div>
+<div class="pipeline-wrap">
+<div class="pipeline-step">
+<div class="pipeline-step-num">1</div>
+<h4>Data Ingestion</h4>
+<p>Curated datasets from Kaggle, UCI, and academic sources. Validated for class balance, missing values, and outlier distribution.</p>
+</div>
+<div class="pipeline-step">
+<div class="pipeline-step-num">2</div>
+<h4>Preprocessing</h4>
+<p>StandardScaler normalization, categorical encoding, and stratified train/test splits applied consistently across all models.</p>
+</div>
+<div class="pipeline-step">
+<div class="pipeline-step-num">3</div>
+<h4>Model Training</h4>
+<p>scikit-learn estimators trained with cross-validation. Hyperparameters tuned via GridSearchCV on validation folds.</p>
+</div>
+<div class="pipeline-step">
+<div class="pipeline-step-num">4</div>
+<h4>Evaluation</h4>
+<p>Models evaluated on held-out test sets. Confusion matrices, ROC-AUC, F1, and regression metrics recorded per model.</p>
+</div>
+<div class="pipeline-step">
+<div class="pipeline-step-num">5</div>
+<h4>Deployment</h4>
+<p>Serialized with joblib, served via FastAPI. Real-time inference with feature attribution for every prediction.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

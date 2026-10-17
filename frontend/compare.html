@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Model Benchmarks &amp; Metrics — Quad Analytics</title>
+<meta content="Model Benchmarks &amp; Metrics on Quad Analytics" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main class="container">
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<span>Model Benchmarks</span>
+</div>
+<h1 class="display-md">Model Performance Registry</h1>
+<p class="body-sm mt-8">Comprehensive benchmark comparison across all four deployed machine learning estimators. Evaluated on rigorous out-of-sample holdout partitions.</p>
+</div>
+<div class="data-table-wrap mb-48">
+<table class="data-table">
+<thead>
+<tr>
+<th>Model ID</th>
+<th>Domain</th>
+<th>Algorithm</th>
+<th>Primary Metric</th>
+<th>Score</th>
+<th>ROC-AUC / MAE</th>
+<th>Sample Size</th>
+<th>Inference Latency</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M-01: Diabetes</strong></td>
+<td><span class="tag">Clinical</span></td>
+<td>Support Vector Machine (Linear)</td>
+<td>Test Accuracy</td>
+<td><strong>78.5%</strong></td>
+<td>0.83 AUC</td>
+<td>614 rows</td>
+<td>2.8 ms</td>
+<td><a class="btn btn-secondary btn-sm" href="/diabetes_detail.html">Overview</a></td>
+</tr>
+<tr>
+<td><strong>M-02: Breast Cancer</strong></td>
+<td><span class="tag">Oncology</span></td>
+<td>Random Forest (100 Trees)</td>
+<td>Test Accuracy</td>
+<td><strong>95.4%</strong></td>
+<td>0.97 AUC</td>
+<td>1,500 rows</td>
+<td>3.4 ms</td>
+<td><a class="btn btn-secondary btn-sm" href="/breast_cancer_detail.html">Overview</a></td>
+</tr>
+<tr>
+<td><strong>M-03: Car Valuation</strong></td>
+<td><span class="tag">Automotive</span></td>
+<td>Random Forest Regressor</td>
+<td>R² Score</td>
+<td><strong>0.91</strong></td>
+<td>₹1.27L MAE</td>
+<td>6,019 rows</td>
+<td>3.4 ms</td>
+<td><a class="btn btn-secondary btn-sm" href="/car_price_detail.html">Overview</a></td>
+</tr>
+<tr>
+<td><strong>M-04: IPL Forecaster</strong></td>
+<td><span class="tag">Sports Analytics</span></td>
+<td>Random Forest Regressor</td>
+<td>R² Score</td>
+<td><strong>0.85</strong></td>
+<td>~8.2 Runs MAE</td>
+<td>76K deliveries</td>
+<td>4.0 ms</td>
+<td><a class="btn btn-secondary btn-sm" href="/ipl_detail.html">Overview</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="grid-2 mb-48">
+<div class="chart-panel">
+<h3>Model Accuracy &amp; Fit Scores</h3>
+<p class="chart-desc">Relative predictive accuracy or R² goodness-of-fit normalized on a 0–100 scale.</p>
+<div class="chart-h-md"><canvas id="chart-benchmark-scores"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Inference Execution Time</h3>
+<p class="chart-desc">End-to-end inference latency measured in milliseconds via FastAPI backend.</p>
+<div class="chart-h-md"><canvas id="chart-benchmark-latency"></canvas></div>
+</div>
+</div>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.Chart) return;
+    const gridColor = 'rgba(150,150,140,0.12)';
+    new Chart(document.getElementById('chart-benchmark-scores'), {
+      type: 'bar',
+      data: {
+        labels: ['Diabetes (Acc)', 'Oncology (Acc)', 'Car Price (R2)', 'IPL Forecaster (R2)'],
+        datasets: [{ data: [78.5, 95.4, 90.6, 85.0], backgroundColor: ['#0A0A0A', '#16A34A', '#2563EB', '#D97706'], borderRadius: 4 }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 60, max: 100, grid: { color: gridColor } }, x: { grid: { display: false } } } }
+    });
+
+    new Chart(document.getElementById('chart-benchmark-latency'), {
+      type: 'bar',
+      data: {
+        labels: ['Diabetes', 'Oncology', 'Car Price', 'IPL Forecaster'],
+        datasets: [{ data: [2.8, 3.4, 3.1, 4.0], backgroundColor: 'rgba(15,15,15,0.75)', borderRadius: 4 }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: 'Milliseconds (ms)' }, grid: { color: gridColor } }, x: { grid: { display: false } } } }
+    });
+  });
+  </script>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

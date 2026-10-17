@@ -1,0 +1,13 @@
+{
+  "algorithm": "Gradient Boosting Regressor (log1p TransformedTarget)",
+  "dataset": "Indian Pre-Owned Cars Marketplace",
+  "dataset_rows": 6019,
+  "train_rows": 4815,
+  "test_rows": 1204,
+  "r2_score": 90.56,
+  "mae_lakhs": 1.272,
+  "mae_inr": 127169,
+  "rmse_lakhs": 3.409,
+  "features": 14,
+  "current_year": 2026
+}

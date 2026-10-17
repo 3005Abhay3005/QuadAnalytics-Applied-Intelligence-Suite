@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diabetes Risk Inference — Quad Analytics</title>
+<meta content="Diabetes Risk Inference on Quad Analytics" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main class="container">
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<a href="/diabetes_detail.html">Model 01 — Diabetes Risk</a>
+<span>›</span>
+<span>Inference Sandbox</span>
+</div>
+<h1 class="display-md">Diabetes Risk Predictor</h1>
+<p class="body-sm mt-8">Enter patient biometric markers below to obtain real-time probabilistic risk assessment and feature attributions. <a href="/diabetes_detail.html" style="text-decoration:underline">Read full methodology and dataset overview →</a></p>
+</div>
+<div class="inference-layout">
+<!-- Form Sidebar -->
+<div class="inference-sidebar">
+<div class="inference-panel">
+<div class="panel-header">
+<h2>Patient Biomarkers</h2>
+<p>Calibrated against PIMA Indian clinical cohort</p>
+</div>
+<div class="panel-body">
+<div class="presets-bar">
+<span style="font-size:0.75rem;font-weight:600;color:var(--text-dim);align-self:center;margin-right:4px">Presets:</span>
+<button class="preset-btn" data-preset="healthy" type="button">Healthy Normal</button>
+<button class="preset-btn" data-preset="borderline" type="button">Pre-Diabetic</button>
+<button class="preset-btn" data-preset="high_risk" type="button">Elevated Risk</button>
+</div>
+<form id="diabetes-form">
+<!-- Pregnancies -->
+<div class="field">
+<label for="pregnancies">Pregnancies <span class="text-dim" style="font-weight:400;font-size:0.75rem">count</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-pregnancies" max="17" min="0" step="1" type="range" value="1"/>
+<input class="field-number" id="pregnancies" max="17" min="0" required="" step="1" type="number" value="1"/>
+</div>
+<div class="range-hint"><span>Adult cohort range: 0 – 17</span><span>NIDDK</span></div>
+</div>
+<!-- Glucose -->
+<div class="field">
+<label for="glucose">Plasma Glucose <span class="text-dim" style="font-weight:400;font-size:0.75rem">mg/dL (2hr OGTT)</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-glucose" max="250" min="50" step="1" type="range" value="88"/>
+<input class="field-number" id="glucose" max="250" min="50" required="" step="1" type="number" value="88"/>
+</div>
+<div class="range-hint"><span>Normal Fasting: 70 – 99 mg/dL · Pre-diabetic: 100 – 125 mg/dL</span><span>ADA</span></div>
+</div>
+<!-- Blood Pressure -->
+<div class="field">
+<label for="blood_pressure">Diastolic Blood Pressure <span class="text-dim" style="font-weight:400;font-size:0.75rem">mmHg</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-blood_pressure" max="140" min="40" step="1" type="range" value="70"/>
+<input class="field-number" id="blood_pressure" max="140" min="40" required="" step="1" type="number" value="70"/>
+</div>
+<div class="range-hint"><span>Optimal Diastolic: &lt; 80 mmHg · Stage 1: 80 – 89 mmHg</span><span>AHA</span></div>
+</div>
+<!-- Insulin -->
+<div class="field">
+<label for="insulin">Serum Insulin <span class="text-dim" style="font-weight:400;font-size:0.75rem">μU/mL (2hr post-load)</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-insulin" max="600" min="0" step="1" type="range" value="15"/>
+<input class="field-number" id="insulin" max="600" min="0" required="" step="1" type="number" value="15"/>
+</div>
+<div class="range-hint"><span>Normal Fasting: 2 – 25 μU/mL</span><span>Clinical Ref</span></div>
+</div>
+<!-- BMI -->
+<div class="field">
+<label for="bmi">Body Mass Index (BMI) <span class="text-dim" style="font-weight:400;font-size:0.75rem">kg/m²</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-bmi" max="60.0" min="15.0" step="0.1" type="range" value="21.4"/>
+<input class="field-number" id="bmi" max="60.0" min="15.0" required="" step="0.1" type="number" value="21.4"/>
+</div>
+<div class="range-hint"><span>Normal: 18.5 – 24.9 · Overweight: 25.0 – 29.9</span><span>WHO</span></div>
+</div>
+<!-- Age -->
+<div class="field">
+<label for="age">Age <span class="text-dim" style="font-weight:400;font-size:0.75rem">years</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-age" max="90" min="18" step="1" type="range" value="24"/>
+<input class="field-number" id="age" max="90" min="18" required="" step="1" type="number" value="24"/>
+</div>
+<div class="range-hint"><span>Cohort range: 21 – 81 years</span><span>Demographics</span></div>
+</div>
+<div class="error-msg" id="api-error"></div>
+<div class="mt-24">
+<button class="btn btn-primary" id="diabetes-submit" style="width:100%" type="submit">
+<span class="btn-default-text">Run Prediction</span>
+<span class="btn-loading-text">Computing SVM Decision...</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Result Panel -->
+<div>
+<div class="result-main">
+<div class="result-empty" id="result-empty">
+<h3>Ready for Clinical Inference</h3>
+<p>Adjust the patient parameters or select a reference preset to generate a real-time risk profile.</p>
+</div>
+<div class="result-body" id="result-body">
+<span class="label">Model Classification Output</span>
+<div class="result-verdict mt-8" id="result-value">—</div>
+<div class="result-sub" id="result-risk">—</div>
+<div class="result-conf" id="result-confidence">—</div>
+<hr class="result-divider"/>
+<div class="result-section-title">Class Probability Distribution</div>
+<div class="result-chart-h">
+<canvas id="result-chart"></canvas>
+</div>
+<hr class="result-divider"/>
+<div class="result-section-title">Explainable AI — Feature Attributions</div>
+<p class="body-sm mb-16">Linear SVM coefficient × z-score feature contributions. Red shifts the prediction toward diabetic risk; green shifts toward non-diabetic.</p>
+<div class="attribution-chart-h">
+<canvas id="attribution-chart"></canvas>
+</div>
+<div class="result-disclaimer">
+              Notice: This prediction is generated by a Support Vector Machine trained on the PIMA Indian Diabetes Database. It is designed solely for academic and demonstrative purposes and does not represent clinical diagnosis.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

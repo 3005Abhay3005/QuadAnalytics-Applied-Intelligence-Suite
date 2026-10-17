@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Developer API Documentation — Quad Analytics</title>
+<meta content="Developer API Documentation on Quad Analytics" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main class="container">
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<span>Developer API</span>
+</div>
+<h1 class="display-md">REST API Reference</h1>
+<p class="body-sm mt-8">Integrate Quad Analytics models into external workflows. All endpoints accept and return JSON payloads. Stateless inference with zero telemetry retention.</p>
+</div>
+<div class="prose mb-48">
+<h2>Base URL &amp; Protocol</h2>
+<p>All endpoints are served over standard HTTP/HTTPS. Requests must include the <code>Content-Type: application/json</code> header for POST endpoints.</p>
+<div class="note"><p>Base URL: <code>http://localhost:8000</code> (Local Development) · Interactive OpenAPI docs available at <a href="/docs" style="text-decoration:underline" target="_blank">/docs</a>.</p></div>
+<h2>Endpoints Overview</h2>
+<div class="data-table-wrap mb-32">
+<table class="data-table">
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="tag" style="background:#E0E7FF;color:#3730A3">GET</span></td>
+<td><code>/api/health</code></td>
+<td>Platform health check &amp; system status</td>
+</tr>
+<tr>
+<td><span class="tag" style="background:#E0E7FF;color:#3730A3">GET</span></td>
+<td><code>/api/stats</code></td>
+<td>Aggregate model metrics and telemetry</td>
+</tr>
+<tr>
+<td><span class="tag" style="background:#DCFCE7;color:#166534">POST</span></td>
+<td><code>/api/predict/diabetes</code></td>
+<td>Run SVM inference on diabetes biomarkers</td>
+</tr>
+<tr>
+<td><span class="tag" style="background:#DCFCE7;color:#166534">POST</span></td>
+<td><code>/api/predict/breast-cancer</code></td>
+<td>Run Random Forest oncology screening</td>
+</tr>
+<tr>
+<td><span class="tag" style="background:#DCFCE7;color:#166534">POST</span></td>
+<td><code>/api/predict/car-price</code></td>
+<td>Estimate used car market valuation</td>
+</tr>
+<tr>
+<td><span class="tag" style="background:#DCFCE7;color:#166534">POST</span></td>
+<td><code>/api/predict/ipl-score</code></td>
+<td>Forecast IPL match first-innings total</td>
+</tr>
+<tr>
+<td><span class="tag" style="background:#E0E7FF;color:#3730A3">GET</span></td>
+<td><code>/api/dataset/{model_id}</code></td>
+<td>Fetch dataset schema and preview rows</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Sample Request &amp; Response</h2>
+<p>Example using <code>/api/predict/diabetes</code> with curl, Python, and JavaScript:</p>
+<div class="code-block code-window">
+<div class="code-block-header">
+<div class="code-lang-tabs">
+<button class="code-tab code-tab-btn active" data-lang="curl">cURL</button>
+<button class="code-tab code-tab-btn" data-lang="python">Python</button>
+<button class="code-tab code-tab-btn" data-lang="js">JavaScript</button>
+</div>
+<button class="copy-btn code-copy-btn">Copy</button>
+</div>
+<div class="code-body">
+<pre class="code-content-block" data-lang="curl"><code>curl -X POST "http://localhost:8000/api/predict/diabetes" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "pregnancies": 2,
+    "glucose": 130,
+    "blood_pressure": 75,
+    "insulin": 35,
+    "bmi": 28.4,
+    "age": 42
+  }'</code></pre>
+<pre class="code-content-block" data-lang="python" style="display:none"><code>import requests
+
+url = "http://localhost:8000/api/predict/diabetes"
+payload = {
+    "pregnancies": 2,
+    "glucose": 130,
+    "blood_pressure": 75,
+    "insulin": 35,
+    "bmi": 28.4,
+    "age": 42
+}
+
+response = requests.post(url, json=payload)
+data = response.json()
+print("Prediction:", data["prediction"]["result"])
+print("Confidence:", data["prediction"]["confidence"], "%")</code></pre>
+<pre class="code-content-block" data-lang="js" style="display:none"><code>const res = await fetch("http://localhost:8000/api/predict/diabetes", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    pregnancies: 2,
+    glucose: 130,
+    blood_pressure: 75,
+    insulin: 35,
+    bmi: 28.4,
+    age: 42
+  })
+});
+
+const data = await res.json();
+console.log(data.prediction);</code></pre>
+</div>
+</div>
+<h3>Example JSON Response</h3>
+<div class="code-block">
+<div class="code-block-header">
+<span style="font-size:0.75rem;font-family:var(--mono);color:#8B949E">HTTP 200 OK · JSON</span>
+</div>
+<div class="code-body">
+<pre><code>{
+  "status": "success",
+  "model": "Diabetes Prediction (SVM)",
+  "prediction": {
+    "label": 1,
+    "result": "Diabetic Marker Detected",
+    "confidence": 74.2,
+    "risk_level": "Elevated",
+    "attributions": [
+      { "feature": "Glucose", "value": 130, "impact": 0.42, "direction": "positive" },
+      { "feature": "BMI", "value": 28.4, "impact": 0.28, "direction": "positive" },
+      { "feature": "Blood Pressure", "value": 75, "impact": -0.05, "direction": "negative" }
+    ]
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

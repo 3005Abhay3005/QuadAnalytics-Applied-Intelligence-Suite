@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Used Car Price Estimator — Quad Analytics</title>
+<meta content="Quad Analytics — Applied Machine Learning Platform" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main>
+<section class="model-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<span>Model 03</span>
+<span>›</span>
+<span>Automotive</span>
+</div>
+<div class="model-hero-inner">
+<div>
+<p class="model-hero-tag">Model 03 — Automotive</p>
+<h1>Used Car Price Estimator</h1>
+<p class="lead">A high-performance Gradient Boosting regression engine with log target transformation that estimates resale market values of pre-owned vehicles across Indian metropolitan markets.</p>
+<div class="model-hero-actions">
+<a class="btn btn-primary btn-lg" href="/car_price.html">Launch Model</a>
+<a class="btn btn-secondary" href="/datasets.html">Dataset Catalog</a>
+</div>
+</div>
+<div class="model-metrics-grid">
+<div class="model-metric">
+<div class="mv">0.91</div>
+<div class="ml">R² on held-out test set</div>
+</div>
+<div class="model-metric">
+<div class="mv">₹1.27L</div>
+<div class="ml">Mean absolute error (INR)</div>
+</div>
+<div class="model-metric">
+<div class="mv">6,019</div>
+<div class="ml">Verified market records</div>
+</div>
+<div class="model-metric">
+<div class="mv">14</div>
+<div class="ml">Engineered features</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main content -->
+<section class="section">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start">
+<!-- Prose -->
+<div class="prose">
+<h2>Introduction</h2>
+<p>The Used Car Price Estimator is a regression model that predicts the market resale value of a pre-owned vehicle based on key attributes. It addresses one of the core challenges in the automotive industry: the asymmetric information between buyers and sellers in the second-hand car market.</p>
+<p>By encoding structured features — vehicle age, mileage, brand positioning, model series, powertrain capacity (CC & bhp), fuel technology, transmission type, and location — into a tuned Gradient Boosting Regressor, the model produces estimates that closely track real market transaction prices across major Indian metropolitan hubs.</p>
+<h2>Dataset Overview</h2>
+<p>The training data consists of 6,019 vehicle listings across Indian urban markets (Mumbai, Pune, Chennai, Delhi, Hyderabad, Bangalore, Kolkata, Jaipur, Coimbatore, Ahmedabad, Kochi). Each listing includes the car name, location, year of purchase, kilometers driven, fuel type, transmission, owner history, mileage, engine displacement, and power output.</p>
+<p>Vehicle age is computed dynamically as the difference between the current year and the year of manufacture — converting a calendar year into an age feature that directly captures true depreciation duration. Specific power density (bhp/CC) and annual usage intensity (km/yr) were engineered to capture vehicle wear and efficiency.</p>
+<h3>Key Dataset Facts</h3>
+<ul>
+<li>6,019 records across 30+ manufacturers and 200+ vehicle model series</li>
+<li>Fuel types: Diesel (53%), Petrol (45%), CNG, LPG, Electric (2%)</li>
+<li>Target variable: transaction price in Indian Rupees (Lakhs)</li>
+<li>Top predictive features: Engine displacement, Power, Vehicle Age, Model Series</li>
+<li>Training split: 80% train (4,815) / 20% test (1,204)</li>
+</ul>
+<h2>Machine Learning Methodology</h2>
+<p>The model uses a tuned Gradient Boosting Regressor wrapped in a <code>TransformedTargetRegressor</code> with logarithmic scaling (<code>log1p</code>). Categorical features (brand, model series, location, fuel type, transmission) are one-hot encoded, ordinal features (owner history) are rank encoded, and numeric features are scaled using RobustScaler to resist outlier distortions.</p>
+<p>Gradient Boosting was chosen due to its ability to capture complex non-linear feature interactions — particularly between brand prestige, engine power density, and depreciation rates over time.</p>
+<h3>Training Pipeline</h3>
+<ul>
+<li>Preprocessing of unit strings (CC, bhp, kmpl) and missing value imputation</li>
+<li>Engineered features: annual driving intensity and specific power density</li>
+<li>Target log-transformation to stabilize right-skewed pricing distributions</li>
+<li>Gradient Boosting Regressor with 650 estimators, learning rate 0.038, depth 5</li>
+<li>Benchmarked using R² (90.56%), Mean Absolute Error (MAE: 1.27 Lakh INR), and RMSE</li>
+</ul>
+</div>
+<!-- Sidebar specs -->
+<div style="position:sticky;top:calc(var(--nav-h) + 24px)">
+<div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+<div class="panel-header">
+<h2>Technical Specifications</h2>
+</div>
+<div class="panel-body">
+<table class="spec-table">
+<tr><td>Task Type</td><td>Regression</td></tr>
+<tr><td>Algorithm</td><td>Gradient Boosting Regressor</td></tr>
+<tr><td>Library</td><td>scikit-learn 1.x</td></tr>
+<tr><td>Training Samples</td><td>4,815</td></tr>
+<tr><td>Test Samples</td><td>1,204</td></tr>
+<tr><td>R² Score</td><td>0.9056 (90.56%)</td></tr>
+<tr><td>MAE</td><td>₹127,169 (~1.27L)</td></tr>
+<tr><td>RMSE</td><td>₹340,894 (~3.41L)</td></tr>
+<tr><td>Features</td><td>14 engineered features</td></tr>
+<tr><td>Estimators</td><td>650 trees</td></tr>
+<tr><td>Target Transform</td><td>log1p price (inverse expm1)</td></tr>
+<tr><td>Serialization</td><td>joblib pipeline</td></tr>
+</table>
+</div>
+<div class="panel-footer">
+<a class="btn btn-primary" href="/car_price.html" style="width:100%">Launch Inference</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDA Charts -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:0">
+<div class="container">
+<div class="section-header">
+<span class="label">Exploratory Data Analysis</span>
+<h2 class="display-md mt-8">Understanding the data<br/>behind the model.</h2>
+</div>
+<div class="charts-grid" id="chartsGrid-car">
+<div class="chart-panel">
+<h3>Feature Distribution</h3>
+<p class="chart-desc">Distribution of primary features across the training dataset, showing spread and central tendency.</p>
+<div class="chart-h-md"><canvas id="chart-dist-car"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Feature Importance</h3>
+<p class="chart-desc">Relative importance of each input feature as determined by the trained model.</p>
+<div class="chart-h-md"><canvas id="chart-importance-car"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Class / Target Distribution</h3>
+<p class="chart-desc">Distribution of the target variable across the dataset, illustrating class balance.</p>
+<div class="chart-h-sm"><canvas id="chart-target-car"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Correlation Heatmap (Key Features)</h3>
+<p class="chart-desc">Pairwise correlation coefficients between the most important input features.</p>
+<div class="chart-h-sm"><canvas id="chart-corr-car"></canvas></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="container">
+<div class="cta-banner">
+<div>
+<h2>Try the Used Car Price Estimator now.</h2>
+<p>Input real values, get an instant prediction with confidence scores and a full explanation of which features drove the result.</p>
+</div>
+<a class="btn btn-white btn-lg" href="/car_price.html">Open Model</a>
+</div>
+</div>
+</main>
+<script>
+  
+(function() {
+  const gridColor = 'rgba(150,150,140,0.12)';
+
+  new Chart(document.getElementById('chart-dist-car'), {
+    type: 'bar',
+    data: {
+      labels: ['Pre-2000', '2000-2005', '2006-2010', '2011-2015', '2016+'],
+      datasets: [{ label: 'Number of listings', data: [42, 95, 187, 283, 285], backgroundColor: 'rgba(15,15,15,0.75)', borderRadius: 4 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: gridColor } }, x: { grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('chart-importance-car'), {
+    type: 'bar',
+    data: {
+      labels: ['Vehicle Age', 'Km Driven', 'Brand Tier', 'Fuel Type', 'Transmission'],
+      datasets: [{ data: [0.48, 0.28, 0.12, 0.08, 0.04], backgroundColor: 'rgba(15,15,15,0.8)', borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { color: gridColor } }, y: { grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('chart-target-car'), {
+    type: 'bar',
+    data: {
+      labels: ['< 1L', '1-3L', '3-6L', '6-10L', '10-20L', '20L+'],
+      datasets: [{ label: 'Listings', data: [89, 224, 198, 154, 112, 62], backgroundColor: ['rgba(15,15,15,0.5)','rgba(15,15,15,0.6)','rgba(15,15,15,0.65)','rgba(15,15,15,0.7)','rgba(15,15,15,0.75)','rgba(15,15,15,0.85)'], borderRadius: 4 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: gridColor } }, x: { grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('chart-corr-car'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Petrol', 'Diesel', 'Electric', 'CNG'],
+      datasets: [{ data: [58, 34, 4, 4], backgroundColor: ['rgba(15,15,15,0.8)','rgba(15,15,15,0.5)','rgba(15,15,15,0.3)','rgba(15,15,15,0.15)'], borderWidth: 0 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }
+  });
+})();
+
+  </script>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

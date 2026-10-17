@@ -1,0 +1,2518 @@
+{
+  "companies": [
+    "Ambassador",
+    "Audi",
+    "BMW",
+    "Bentley",
+    "Chevrolet",
+    "Datsun",
+    "Fiat",
+    "Force",
+    "Ford",
+    "Honda",
+    "Hyundai",
+    "ISUZU",
+    "Isuzu",
+    "Jaguar",
+    "Jeep",
+    "Lamborghini",
+    "Land",
+    "Mahindra",
+    "Maruti",
+    "Mercedes-Benz",
+    "Mini",
+    "Mitsubishi",
+    "Nissan",
+    "Porsche",
+    "Renault",
+    "Skoda",
+    "Smart",
+    "Tata",
+    "Toyota",
+    "Volkswagen",
+    "Volvo"
+  ],
+  "fuel_types": [
+    "CNG",
+    "Diesel",
+    "Electric",
+    "LPG",
+    "Petrol"
+  ],
+  "transmissions": [
+    "Automatic",
+    "Manual"
+  ],
+  "locations": [
+    "Ahmedabad",
+    "Bangalore",
+    "Chennai",
+    "Coimbatore",
+    "Delhi",
+    "Hyderabad",
+    "Jaipur",
+    "Kochi",
+    "Kolkata",
+    "Mumbai",
+    "Pune"
+  ],
+  "owner_types": [
+    "First",
+    "Second",
+    "Third",
+    "Fourth & Above"
+  ],
+  "car_names": [
+    "Ambassador Classic",
+    "Audi A3",
+    "Audi A4",
+    "Audi A6",
+    "Audi A7",
+    "Audi A8",
+    "Audi Q3",
+    "Audi Q5",
+    "Audi Q7",
+    "Audi RS5",
+    "Audi TT",
+    "BMW 1",
+    "BMW 3",
+    "BMW 5",
+    "BMW 6",
+    "BMW 7",
+    "BMW X1",
+    "BMW X3",
+    "BMW X5",
+    "BMW X6",
+    "BMW Z4",
+    "Bentley Continental",
+    "Chevrolet Aveo",
+    "Chevrolet Beat",
+    "Chevrolet Captiva",
+    "Chevrolet Cruze",
+    "Chevrolet Enjoy",
+    "Chevrolet Optra",
+    "Chevrolet Sail",
+    "Chevrolet Spark",
+    "Chevrolet Tavera",
+    "Datsun GO",
+    "Datsun Redi",
+    "Datsun redi-GO",
+    "Fiat Avventura",
+    "Fiat Grande",
+    "Fiat Linea",
+    "Fiat Petra",
+    "Fiat Punto",
+    "Fiat Siena",
+    "Force One",
+    "Ford Aspire",
+    "Ford Classic",
+    "Ford EcoSport",
+    "Ford Ecosport",
+    "Ford Endeavour",
+    "Ford Fiesta",
+    "Ford Figo",
+    "Ford Freestyle",
+    "Ford Fusion",
+    "Ford Ikon",
+    "Ford Mustang",
+    "Honda Accord",
+    "Honda Amaze",
+    "Honda BR-V",
+    "Honda BRV",
+    "Honda Brio",
+    "Honda CR-V",
+    "Honda City",
+    "Honda Civic",
+    "Honda Jazz",
+    "Honda Mobilio",
+    "Honda WR-V",
+    "Honda WRV",
+    "Hyundai Accent",
+    "Hyundai Creta",
+    "Hyundai EON",
+    "Hyundai Elantra",
+    "Hyundai Elite",
+    "Hyundai Getz",
+    "Hyundai Grand",
+    "Hyundai Santa",
+    "Hyundai Santro",
+    "Hyundai Sonata",
+    "Hyundai Tucson",
+    "Hyundai Verna",
+    "Hyundai Xcent",
+    "Hyundai i10",
+    "Hyundai i20",
+    "ISUZU D-MAX",
+    "Isuzu MUX",
+    "Jaguar F",
+    "Jaguar XE",
+    "Jaguar XF",
+    "Jaguar XJ",
+    "Jeep Compass",
+    "Lamborghini Gallardo",
+    "Land Rover",
+    "Mahindra Bolero",
+    "Mahindra E",
+    "Mahindra Jeep",
+    "Mahindra KUV",
+    "Mahindra Logan",
+    "Mahindra NuvoSport",
+    "Mahindra Quanto",
+    "Mahindra Renault",
+    "Mahindra Scorpio",
+    "Mahindra Ssangyong",
+    "Mahindra TUV",
+    "Mahindra Thar",
+    "Mahindra Verito",
+    "Mahindra XUV300",
+    "Mahindra XUV500",
+    "Mahindra Xylo",
+    "Maruti 1000",
+    "Maruti 800",
+    "Maruti A-Star",
+    "Maruti Alto",
+    "Maruti Baleno",
+    "Maruti Celerio",
+    "Maruti Ciaz",
+    "Maruti Dzire",
+    "Maruti Eeco",
+    "Maruti Ertiga",
+    "Maruti Esteem",
+    "Maruti Estilo",
+    "Maruti Grand",
+    "Maruti Ignis",
+    "Maruti Omni",
+    "Maruti Ritz",
+    "Maruti S",
+    "Maruti S-Cross",
+    "Maruti SX4",
+    "Maruti Swift",
+    "Maruti Versa",
+    "Maruti Vitara",
+    "Maruti Wagon",
+    "Maruti Zen",
+    "Mercedes-Benz A",
+    "Mercedes-Benz B",
+    "Mercedes-Benz C-Class",
+    "Mercedes-Benz CLA",
+    "Mercedes-Benz CLS-Class",
+    "Mercedes-Benz E-Class",
+    "Mercedes-Benz GL-Class",
+    "Mercedes-Benz GLA",
+    "Mercedes-Benz GLC",
+    "Mercedes-Benz GLE",
+    "Mercedes-Benz GLS",
+    "Mercedes-Benz M-Class",
+    "Mercedes-Benz New",
+    "Mercedes-Benz R-Class",
+    "Mercedes-Benz S",
+    "Mercedes-Benz S-Class",
+    "Mercedes-Benz SL-Class",
+    "Mercedes-Benz SLC",
+    "Mercedes-Benz SLK-Class",
+    "Mini Clubman",
+    "Mini Cooper",
+    "Mini Countryman",
+    "Mitsubishi Cedia",
+    "Mitsubishi Lancer",
+    "Mitsubishi Montero",
+    "Mitsubishi Outlander",
+    "Mitsubishi Pajero",
+    "Nissan Evalia",
+    "Nissan Micra",
+    "Nissan Sunny",
+    "Nissan Teana",
+    "Nissan Terrano",
+    "Nissan X-Trail",
+    "Porsche Boxster",
+    "Porsche Cayenne",
+    "Porsche Cayman",
+    "Porsche Panamera",
+    "Renault Captur",
+    "Renault Duster",
+    "Renault Fluence",
+    "Renault KWID",
+    "Renault Koleos",
+    "Renault Lodgy",
+    "Renault Pulse",
+    "Renault Scala",
+    "Skoda Fabia",
+    "Skoda Laura",
+    "Skoda Octavia",
+    "Skoda Rapid",
+    "Skoda Superb",
+    "Skoda Yeti",
+    "Smart Fortwo",
+    "Tata Bolt",
+    "Tata Hexa",
+    "Tata Indica",
+    "Tata Indigo",
+    "Tata Manza",
+    "Tata Nano",
+    "Tata New",
+    "Tata Nexon",
+    "Tata Safari",
+    "Tata Sumo",
+    "Tata Tiago",
+    "Tata Tigor",
+    "Tata Venture",
+    "Tata Xenon",
+    "Tata Zest",
+    "Toyota Camry",
+    "Toyota Corolla",
+    "Toyota Etios",
+    "Toyota Fortuner",
+    "Toyota Innova",
+    "Toyota Platinum",
+    "Toyota Prius",
+    "Toyota Qualis",
+    "Volkswagen Ameo",
+    "Volkswagen Beetle",
+    "Volkswagen CrossPolo",
+    "Volkswagen Jetta",
+    "Volkswagen Passat",
+    "Volkswagen Polo",
+    "Volkswagen Tiguan",
+    "Volkswagen Vento",
+    "Volvo S60",
+    "Volvo S80",
+    "Volvo V40",
+    "Volvo XC60",
+    "Volvo XC90"
+  ],
+  "models_by_company": {
+    "Ambassador": [
+      "Ambassador Classic"
+    ],
+    "Audi": [
+      "Audi A3",
+      "Audi A4",
+      "Audi A6",
+      "Audi A7",
+      "Audi A8",
+      "Audi Q3",
+      "Audi Q5",
+      "Audi Q7",
+      "Audi RS5",
+      "Audi TT"
+    ],
+    "BMW": [
+      "BMW 1",
+      "BMW 3",
+      "BMW 5",
+      "BMW 6",
+      "BMW 7",
+      "BMW X1",
+      "BMW X3",
+      "BMW X5",
+      "BMW X6",
+      "BMW Z4"
+    ],
+    "Bentley": [
+      "Bentley Continental"
+    ],
+    "Chevrolet": [
+      "Chevrolet Aveo",
+      "Chevrolet Beat",
+      "Chevrolet Captiva",
+      "Chevrolet Cruze",
+      "Chevrolet Enjoy",
+      "Chevrolet Optra",
+      "Chevrolet Sail",
+      "Chevrolet Spark",
+      "Chevrolet Tavera"
+    ],
+    "Datsun": [
+      "Datsun GO",
+      "Datsun Redi",
+      "Datsun redi-GO"
+    ],
+    "Fiat": [
+      "Fiat Avventura",
+      "Fiat Grande",
+      "Fiat Linea",
+      "Fiat Petra",
+      "Fiat Punto",
+      "Fiat Siena"
+    ],
+    "Force": [
+      "Force One"
+    ],
+    "Ford": [
+      "Ford Aspire",
+      "Ford Classic",
+      "Ford EcoSport",
+      "Ford Ecosport",
+      "Ford Endeavour",
+      "Ford Fiesta",
+      "Ford Figo",
+      "Ford Freestyle",
+      "Ford Fusion",
+      "Ford Ikon",
+      "Ford Mustang"
+    ],
+    "Honda": [
+      "Honda Accord",
+      "Honda Amaze",
+      "Honda BR-V",
+      "Honda BRV",
+      "Honda Brio",
+      "Honda CR-V",
+      "Honda City",
+      "Honda Civic",
+      "Honda Jazz",
+      "Honda Mobilio",
+      "Honda WR-V",
+      "Honda WRV"
+    ],
+    "Hyundai": [
+      "Hyundai Accent",
+      "Hyundai Creta",
+      "Hyundai EON",
+      "Hyundai Elantra",
+      "Hyundai Elite",
+      "Hyundai Getz",
+      "Hyundai Grand",
+      "Hyundai Santa",
+      "Hyundai Santro",
+      "Hyundai Sonata",
+      "Hyundai Tucson",
+      "Hyundai Verna",
+      "Hyundai Xcent",
+      "Hyundai i10",
+      "Hyundai i20"
+    ],
+    "ISUZU": [
+      "ISUZU D-MAX"
+    ],
+    "Isuzu": [
+      "Isuzu MUX"
+    ],
+    "Jaguar": [
+      "Jaguar F",
+      "Jaguar XE",
+      "Jaguar XF",
+      "Jaguar XJ"
+    ],
+    "Jeep": [
+      "Jeep Compass"
+    ],
+    "Lamborghini": [
+      "Lamborghini Gallardo"
+    ],
+    "Land": [
+      "Land Rover"
+    ],
+    "Mahindra": [
+      "Mahindra Bolero",
+      "Mahindra E",
+      "Mahindra Jeep",
+      "Mahindra KUV",
+      "Mahindra Logan",
+      "Mahindra NuvoSport",
+      "Mahindra Quanto",
+      "Mahindra Renault",
+      "Mahindra Scorpio",
+      "Mahindra Ssangyong",
+      "Mahindra TUV",
+      "Mahindra Thar",
+      "Mahindra Verito",
+      "Mahindra XUV300",
+      "Mahindra XUV500",
+      "Mahindra Xylo"
+    ],
+    "Maruti": [
+      "Maruti 1000",
+      "Maruti 800",
+      "Maruti A-Star",
+      "Maruti Alto",
+      "Maruti Baleno",
+      "Maruti Celerio",
+      "Maruti Ciaz",
+      "Maruti Dzire",
+      "Maruti Eeco",
+      "Maruti Ertiga",
+      "Maruti Esteem",
+      "Maruti Estilo",
+      "Maruti Grand",
+      "Maruti Ignis",
+      "Maruti Omni",
+      "Maruti Ritz",
+      "Maruti S",
+      "Maruti S-Cross",
+      "Maruti SX4",
+      "Maruti Swift",
+      "Maruti Versa",
+      "Maruti Vitara",
+      "Maruti Wagon",
+      "Maruti Zen"
+    ],
+    "Mercedes-Benz": [
+      "Mercedes-Benz A",
+      "Mercedes-Benz B",
+      "Mercedes-Benz C-Class",
+      "Mercedes-Benz CLA",
+      "Mercedes-Benz CLS-Class",
+      "Mercedes-Benz E-Class",
+      "Mercedes-Benz GL-Class",
+      "Mercedes-Benz GLA",
+      "Mercedes-Benz GLC",
+      "Mercedes-Benz GLE",
+      "Mercedes-Benz GLS",
+      "Mercedes-Benz M-Class",
+      "Mercedes-Benz New",
+      "Mercedes-Benz R-Class",
+      "Mercedes-Benz S",
+      "Mercedes-Benz S-Class",
+      "Mercedes-Benz SL-Class",
+      "Mercedes-Benz SLC",
+      "Mercedes-Benz SLK-Class"
+    ],
+    "Mini": [
+      "Mini Clubman",
+      "Mini Cooper",
+      "Mini Countryman"
+    ],
+    "Mitsubishi": [
+      "Mitsubishi Cedia",
+      "Mitsubishi Lancer",
+      "Mitsubishi Montero",
+      "Mitsubishi Outlander",
+      "Mitsubishi Pajero"
+    ],
+    "Nissan": [
+      "Nissan Evalia",
+      "Nissan Micra",
+      "Nissan Sunny",
+      "Nissan Teana",
+      "Nissan Terrano",
+      "Nissan X-Trail"
+    ],
+    "Porsche": [
+      "Porsche Boxster",
+      "Porsche Cayenne",
+      "Porsche Cayman",
+      "Porsche Panamera"
+    ],
+    "Renault": [
+      "Renault Captur",
+      "Renault Duster",
+      "Renault Fluence",
+      "Renault KWID",
+      "Renault Koleos",
+      "Renault Lodgy",
+      "Renault Pulse",
+      "Renault Scala"
+    ],
+    "Skoda": [
+      "Skoda Fabia",
+      "Skoda Laura",
+      "Skoda Octavia",
+      "Skoda Rapid",
+      "Skoda Superb",
+      "Skoda Yeti"
+    ],
+    "Smart": [
+      "Smart Fortwo"
+    ],
+    "Tata": [
+      "Tata Bolt",
+      "Tata Hexa",
+      "Tata Indica",
+      "Tata Indigo",
+      "Tata Manza",
+      "Tata Nano",
+      "Tata New",
+      "Tata Nexon",
+      "Tata Safari",
+      "Tata Sumo",
+      "Tata Tiago",
+      "Tata Tigor",
+      "Tata Venture",
+      "Tata Xenon",
+      "Tata Zest"
+    ],
+    "Toyota": [
+      "Toyota Camry",
+      "Toyota Corolla",
+      "Toyota Etios",
+      "Toyota Fortuner",
+      "Toyota Innova",
+      "Toyota Platinum",
+      "Toyota Prius",
+      "Toyota Qualis"
+    ],
+    "Volkswagen": [
+      "Volkswagen Ameo",
+      "Volkswagen Beetle",
+      "Volkswagen CrossPolo",
+      "Volkswagen Jetta",
+      "Volkswagen Passat",
+      "Volkswagen Polo",
+      "Volkswagen Tiguan",
+      "Volkswagen Vento"
+    ],
+    "Volvo": [
+      "Volvo S60",
+      "Volvo S80",
+      "Volvo V40",
+      "Volvo XC60",
+      "Volvo XC90"
+    ]
+  },
+  "specs_lookup": {
+    "Ambassador Classic": {
+      "mileage": 12.8,
+      "engine": 1489,
+      "power": 35.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Audi A3": {
+      "mileage": 20.38,
+      "engine": 1968,
+      "power": 143.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 4
+    },
+    "Audi A4": {
+      "mileage": 16.55,
+      "engine": 1968,
+      "power": 163.2,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 78
+    },
+    "Audi A6": {
+      "mileage": 17.68,
+      "engine": 1968,
+      "power": 174.3,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 49
+    },
+    "Audi A7": {
+      "mileage": 14.4,
+      "engine": 2967,
+      "power": 241.4,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 3
+    },
+    "Audi A8": {
+      "mileage": 11.8,
+      "engine": 2967,
+      "power": 246.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Audi Q3": {
+      "mileage": 15.73,
+      "engine": 1968,
+      "power": 174.3,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 27
+    },
+    "Audi Q5": {
+      "mileage": 14.16,
+      "engine": 1968,
+      "power": 174.3,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 30
+    },
+    "Audi Q7": {
+      "mileage": 12.07,
+      "engine": 2967,
+      "power": 241.4,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 38
+    },
+    "Audi RS5": {
+      "mileage": 11.05,
+      "engine": 2894,
+      "power": 444.0,
+      "seats": 4,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Audi TT": {
+      "mileage": 9.9,
+      "engine": 1984,
+      "power": 207.8,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 3
+    },
+    "BMW 1": {
+      "mileage": 20.58,
+      "engine": 1995,
+      "power": 143.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 3
+    },
+    "BMW 3": {
+      "mileage": 18.88,
+      "engine": 1995,
+      "power": 184.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 98
+    },
+    "BMW 5": {
+      "mileage": 18.12,
+      "engine": 1995,
+      "power": 190.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 68
+    },
+    "BMW 6": {
+      "mileage": 9.52,
+      "engine": 2993,
+      "power": 313.0,
+      "seats": 4,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 7
+    },
+    "BMW 7": {
+      "mileage": 16.46,
+      "engine": 2993,
+      "power": 258.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 13
+    },
+    "BMW X1": {
+      "mileage": 17.05,
+      "engine": 1995,
+      "power": 184.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 32
+    },
+    "BMW X3": {
+      "mileage": 17.55,
+      "engine": 1995,
+      "power": 190.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 14
+    },
+    "BMW X5": {
+      "mileage": 15.3,
+      "engine": 2993,
+      "power": 258.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 24
+    },
+    "BMW X6": {
+      "mileage": 11.2,
+      "engine": 2993,
+      "power": 273.5,
+      "seats": 4,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 6
+    },
+    "BMW Z4": {
+      "mileage": 10.37,
+      "engine": 2979,
+      "power": 306.0,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Bentley Continental": {
+      "mileage": 8.6,
+      "engine": 5998,
+      "power": 552.0,
+      "seats": 4,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Chevrolet Aveo": {
+      "mileage": 14.59,
+      "engine": 1274,
+      "power": 84.3,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 14
+    },
+    "Chevrolet Beat": {
+      "mileage": 18.6,
+      "engine": 1199,
+      "power": 76.8,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 46
+    },
+    "Chevrolet Captiva": {
+      "mileage": 12.0,
+      "engine": 1991,
+      "power": 147.9,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Chevrolet Cruze": {
+      "mileage": 17.9,
+      "engine": 1998,
+      "power": 163.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 18
+    },
+    "Chevrolet Enjoy": {
+      "mileage": 18.2,
+      "engine": 1248,
+      "power": 73.8,
+      "seats": 8,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 9
+    },
+    "Chevrolet Optra": {
+      "mileage": 15.61,
+      "engine": 1599,
+      "power": 104.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 12
+    },
+    "Chevrolet Sail": {
+      "mileage": 18.2,
+      "engine": 1199,
+      "power": 82.4,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 8
+    },
+    "Chevrolet Spark": {
+      "mileage": 18.0,
+      "engine": 995,
+      "power": 62.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 10
+    },
+    "Chevrolet Tavera": {
+      "mileage": 14.19,
+      "engine": 2499,
+      "power": 79.0,
+      "seats": 9,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Datsun GO": {
+      "mileage": 20.62,
+      "engine": 1198,
+      "power": 67.0,
+      "seats": 6,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 6
+    },
+    "Datsun Redi": {
+      "mileage": 22.7,
+      "engine": 799,
+      "power": 53.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Datsun redi-GO": {
+      "mileage": 22.7,
+      "engine": 799,
+      "power": 53.6,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 6
+    },
+    "Fiat Avventura": {
+      "mileage": 20.5,
+      "engine": 1248,
+      "power": 91.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Fiat Grande": {
+      "mileage": 17.8,
+      "engine": 1248,
+      "power": 75.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Fiat Linea": {
+      "mileage": 19.0,
+      "engine": 1248,
+      "power": 91.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 12
+    },
+    "Fiat Petra": {
+      "mileage": 15.5,
+      "engine": 1242,
+      "power": 90.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Fiat Punto": {
+      "mileage": 15.7,
+      "engine": 1172,
+      "power": 67.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Fiat Siena": {
+      "mileage": 18.0,
+      "engine": 1242,
+      "power": 90.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Force One": {
+      "mileage": 17.0,
+      "engine": 2200,
+      "power": 139.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Ford Aspire": {
+      "mileage": 26.1,
+      "engine": 1498,
+      "power": 99.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Ford Classic": {
+      "mileage": 19.68,
+      "engine": 1399,
+      "power": 67.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Ford EcoSport": {
+      "mileage": 20.82,
+      "engine": 1498,
+      "power": 104.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 42
+    },
+    "Ford Ecosport": {
+      "mileage": 22.7,
+      "engine": 1498,
+      "power": 89.8,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 53
+    },
+    "Ford Endeavour": {
+      "mileage": 11.4,
+      "engine": 2953,
+      "power": 158.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 39
+    },
+    "Ford Fiesta": {
+      "mileage": 17.8,
+      "engine": 1399,
+      "power": 68.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 40
+    },
+    "Ford Figo": {
+      "mileage": 20.0,
+      "engine": 1399,
+      "power": 68.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 101
+    },
+    "Ford Freestyle": {
+      "mileage": 19.0,
+      "engine": 1194,
+      "power": 94.7,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Ford Fusion": {
+      "mileage": 17.7,
+      "engine": 1399,
+      "power": 68.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Ford Ikon": {
+      "mileage": 13.8,
+      "engine": 1299,
+      "power": 70.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 15
+    },
+    "Ford Mustang": {
+      "mileage": 13.0,
+      "engine": 4951,
+      "power": 395.0,
+      "seats": 4,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Honda Accord": {
+      "mileage": 11.7,
+      "engine": 2354,
+      "power": 177.6,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 26
+    },
+    "Honda Amaze": {
+      "mileage": 25.8,
+      "engine": 1498,
+      "power": 98.6,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 106
+    },
+    "Honda BR-V": {
+      "mileage": 15.4,
+      "engine": 1497,
+      "power": 117.3,
+      "seats": 7,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Honda BRV": {
+      "mileage": 16.0,
+      "engine": 1497,
+      "power": 117.3,
+      "seats": 7,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 5
+    },
+    "Honda Brio": {
+      "mileage": 19.4,
+      "engine": 1198,
+      "power": 86.8,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 60
+    },
+    "Honda CR-V": {
+      "mileage": 11.1,
+      "engine": 2354,
+      "power": 152.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 27
+    },
+    "Honda City": {
+      "mileage": 17.4,
+      "engine": 1497,
+      "power": 117.3,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 270
+    },
+    "Honda Civic": {
+      "mileage": 13.5,
+      "engine": 1799,
+      "power": 130.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 32
+    },
+    "Honda Jazz": {
+      "mileage": 18.7,
+      "engine": 1199,
+      "power": 88.7,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 58
+    },
+    "Honda Mobilio": {
+      "mileage": 24.2,
+      "engine": 1498,
+      "power": 98.6,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 16
+    },
+    "Honda WR-V": {
+      "mileage": 17.5,
+      "engine": 1199,
+      "power": 88.7,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Honda WRV": {
+      "mileage": 17.5,
+      "engine": 1199,
+      "power": 88.7,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Hyundai Accent": {
+      "mileage": 13.2,
+      "engine": 1495,
+      "power": 94.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 18
+    },
+    "Hyundai Creta": {
+      "mileage": 17.01,
+      "engine": 1582,
+      "power": 126.2,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 93
+    },
+    "Hyundai EON": {
+      "mileage": 21.1,
+      "engine": 814,
+      "power": 55.2,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 61
+    },
+    "Hyundai Elantra": {
+      "mileage": 22.62,
+      "engine": 1582,
+      "power": 126.2,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 22
+    },
+    "Hyundai Elite": {
+      "mileage": 18.6,
+      "engine": 1197,
+      "power": 81.9,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 14
+    },
+    "Hyundai Getz": {
+      "mileage": 15.3,
+      "engine": 1341,
+      "power": 83.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 10
+    },
+    "Hyundai Grand": {
+      "mileage": 18.9,
+      "engine": 1197,
+      "power": 81.9,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 152
+    },
+    "Hyundai Santa": {
+      "mileage": 13.01,
+      "engine": 2199,
+      "power": 194.3,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 17
+    },
+    "Hyundai Santro": {
+      "mileage": 17.0,
+      "engine": 1086,
+      "power": 62.1,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 78
+    },
+    "Hyundai Sonata": {
+      "mileage": 12.04,
+      "engine": 2178,
+      "power": 142.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 6
+    },
+    "Hyundai Tucson": {
+      "mileage": 12.77,
+      "engine": 1993,
+      "power": 132.4,
+      "seats": 6,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 4
+    },
+    "Hyundai Verna": {
+      "mileage": 18.1,
+      "engine": 1582,
+      "power": 121.3,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 170
+    },
+    "Hyundai Xcent": {
+      "mileage": 24.4,
+      "engine": 1197,
+      "power": 81.9,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 59
+    },
+    "Hyundai i10": {
+      "mileage": 20.36,
+      "engine": 1197,
+      "power": 78.9,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 156
+    },
+    "Hyundai i20": {
+      "mileage": 18.6,
+      "engine": 1197,
+      "power": 81.8,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 247
+    },
+    "ISUZU D-MAX": {
+      "mileage": 12.4,
+      "engine": 2499,
+      "power": 134.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Isuzu MUX": {
+      "mileage": 13.8,
+      "engine": 2999,
+      "power": 174.6,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Jaguar F": {
+      "mileage": 12.5,
+      "engine": 5000,
+      "power": 488.1,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Jaguar XE": {
+      "mileage": 13.6,
+      "engine": 1999,
+      "power": 177.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 3
+    },
+    "Jaguar XF": {
+      "mileage": 16.36,
+      "engine": 2179,
+      "power": 187.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 30
+    },
+    "Jaguar XJ": {
+      "mileage": 11.7,
+      "engine": 2993,
+      "power": 271.2,
+      "seats": 4,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 6
+    },
+    "Jeep Compass": {
+      "mileage": 17.1,
+      "engine": 1956,
+      "power": 170.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 15
+    },
+    "Lamborghini Gallardo": {
+      "mileage": 6.4,
+      "engine": 5204,
+      "power": 560.0,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Land Rover": {
+      "mileage": 12.7,
+      "engine": 2179,
+      "power": 187.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 60
+    },
+    "Mahindra Bolero": {
+      "mileage": 15.96,
+      "engine": 2523,
+      "power": 62.5,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 15
+    },
+    "Mahindra E": {
+      "mileage": 18.0,
+      "engine": 72,
+      "power": 41.0,
+      "seats": 5,
+      "default_fuel": "Electric",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Mahindra Jeep": {
+      "mileage": 18.0,
+      "engine": 2305,
+      "power": 90.0,
+      "seats": 6,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Mahindra KUV": {
+      "mileage": 18.15,
+      "engine": 1198,
+      "power": 82.0,
+      "seats": 6,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 14
+    },
+    "Mahindra Logan": {
+      "mileage": 17.45,
+      "engine": 1425,
+      "power": 70.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Mahindra NuvoSport": {
+      "mileage": 17.45,
+      "engine": 1493,
+      "power": 100.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Mahindra Quanto": {
+      "mileage": 17.21,
+      "engine": 1493,
+      "power": 100.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Mahindra Renault": {
+      "mileage": 17.45,
+      "engine": 1425,
+      "power": 70.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Mahindra Scorpio": {
+      "mileage": 12.05,
+      "engine": 2179,
+      "power": 120.0,
+      "seats": 8,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 61
+    },
+    "Mahindra Ssangyong": {
+      "mileage": 11.18,
+      "engine": 2696,
+      "power": 184.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 13
+    },
+    "Mahindra TUV": {
+      "mileage": 18.49,
+      "engine": 1493,
+      "power": 100.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 9
+    },
+    "Mahindra Thar": {
+      "mileage": 16.55,
+      "engine": 2498,
+      "power": 105.0,
+      "seats": 6,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 6
+    },
+    "Mahindra Verito": {
+      "mileage": 21.02,
+      "engine": 1461,
+      "power": 64.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Mahindra XUV300": {
+      "mileage": 20.0,
+      "engine": 1497,
+      "power": 115.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Mahindra XUV500": {
+      "mileage": 16.0,
+      "engine": 2179,
+      "power": 140.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 113
+    },
+    "Mahindra Xylo": {
+      "mileage": 14.0,
+      "engine": 2498,
+      "power": 112.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 21
+    },
+    "Maruti 1000": {
+      "mileage": 15.0,
+      "engine": 970,
+      "power": 90.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Maruti 800": {
+      "mileage": 16.1,
+      "engine": 796,
+      "power": 37.0,
+      "seats": 4,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 12
+    },
+    "Maruti A-Star": {
+      "mileage": 19.0,
+      "engine": 998,
+      "power": 66.1,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 17
+    },
+    "Maruti Alto": {
+      "mileage": 22.74,
+      "engine": 796,
+      "power": 47.3,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 143
+    },
+    "Maruti Baleno": {
+      "mileage": 21.4,
+      "engine": 1197,
+      "power": 83.1,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 63
+    },
+    "Maruti Celerio": {
+      "mileage": 23.1,
+      "engine": 998,
+      "power": 67.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 58
+    },
+    "Maruti Ciaz": {
+      "mileage": 26.21,
+      "engine": 1248,
+      "power": 88.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 71
+    },
+    "Maruti Dzire": {
+      "mileage": 28.4,
+      "engine": 1248,
+      "power": 73.8,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 24
+    },
+    "Maruti Eeco": {
+      "mileage": 15.1,
+      "engine": 1196,
+      "power": 73.0,
+      "seats": 7,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 18
+    },
+    "Maruti Ertiga": {
+      "mileage": 20.77,
+      "engine": 1248,
+      "power": 88.8,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 75
+    },
+    "Maruti Esteem": {
+      "mileage": 15.9,
+      "engine": 1298,
+      "power": 85.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Maruti Estilo": {
+      "mileage": 19.5,
+      "engine": 1061,
+      "power": 90.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Maruti Grand": {
+      "mileage": 10.1,
+      "engine": 2194,
+      "power": 163.5,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Maruti Ignis": {
+      "mileage": 20.89,
+      "engine": 1197,
+      "power": 81.8,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 6
+    },
+    "Maruti Omni": {
+      "mileage": 16.8,
+      "engine": 796,
+      "power": 35.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 20
+    },
+    "Maruti Ritz": {
+      "mileage": 21.1,
+      "engine": 1248,
+      "power": 73.9,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 64
+    },
+    "Maruti S": {
+      "mileage": 22.7,
+      "engine": 1248,
+      "power": 88.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 7
+    },
+    "Maruti S-Cross": {
+      "mileage": 25.1,
+      "engine": 1248,
+      "power": 88.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Maruti SX4": {
+      "mileage": 16.51,
+      "engine": 1586,
+      "power": 103.3,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 37
+    },
+    "Maruti Swift": {
+      "mileage": 20.85,
+      "engine": 1248,
+      "power": 74.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 353
+    },
+    "Maruti Versa": {
+      "mileage": 11.3,
+      "engine": 1298,
+      "power": 83.1,
+      "seats": 8,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Maruti Vitara": {
+      "mileage": 24.3,
+      "engine": 1248,
+      "power": 88.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 43
+    },
+    "Maruti Wagon": {
+      "mileage": 20.51,
+      "engine": 998,
+      "power": 67.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 154
+    },
+    "Maruti Zen": {
+      "mileage": 18.2,
+      "engine": 998,
+      "power": 64.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 29
+    },
+    "Mercedes-Benz A": {
+      "mileage": 20.0,
+      "engine": 2143,
+      "power": 107.3,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 8
+    },
+    "Mercedes-Benz B": {
+      "mileage": 14.8,
+      "engine": 1595,
+      "power": 120.7,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 12
+    },
+    "Mercedes-Benz C-Class": {
+      "mileage": 18.0,
+      "engine": 1950,
+      "power": 194.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 3
+    },
+    "Mercedes-Benz CLA": {
+      "mileage": 17.9,
+      "engine": 2143,
+      "power": 136.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 13
+    },
+    "Mercedes-Benz CLS-Class": {
+      "mileage": 9.9,
+      "engine": 3498,
+      "power": 271.7,
+      "seats": 4,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Mercedes-Benz E-Class": {
+      "mileage": 13.0,
+      "engine": 2143,
+      "power": 203.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 88
+    },
+    "Mercedes-Benz GL-Class": {
+      "mileage": 12.0,
+      "engine": 2987,
+      "power": 224.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 11
+    },
+    "Mercedes-Benz GLA": {
+      "mileage": 17.9,
+      "engine": 2143,
+      "power": 136.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 18
+    },
+    "Mercedes-Benz GLC": {
+      "mileage": 17.9,
+      "engine": 2143,
+      "power": 170.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 8
+    },
+    "Mercedes-Benz GLE": {
+      "mileage": 11.57,
+      "engine": 2987,
+      "power": 254.8,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 12
+    },
+    "Mercedes-Benz GLS": {
+      "mileage": 11.0,
+      "engine": 2987,
+      "power": 258.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Mercedes-Benz M-Class": {
+      "mileage": 14.0,
+      "engine": 2987,
+      "power": 203.2,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 23
+    },
+    "Mercedes-Benz New": {
+      "mileage": 14.84,
+      "engine": 2143,
+      "power": 170.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 94
+    },
+    "Mercedes-Benz R-Class": {
+      "mileage": 11.8,
+      "engine": 3498,
+      "power": 272.0,
+      "seats": 7,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 4
+    },
+    "Mercedes-Benz S": {
+      "mileage": 13.0,
+      "engine": 2987,
+      "power": 282.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 10
+    },
+    "Mercedes-Benz S-Class": {
+      "mileage": 13.0,
+      "engine": 2987,
+      "power": 210.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 5
+    },
+    "Mercedes-Benz SL-Class": {
+      "mileage": 8.1,
+      "engine": 5461,
+      "power": 387.3,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Mercedes-Benz SLC": {
+      "mileage": 19.0,
+      "engine": 2996,
+      "power": 362.1,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Mercedes-Benz SLK-Class": {
+      "mileage": 18.1,
+      "engine": 3498,
+      "power": 306.0,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 3
+    },
+    "Mini Clubman": {
+      "mileage": 13.8,
+      "engine": 1998,
+      "power": 192.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Mini Cooper": {
+      "mileage": 19.78,
+      "engine": 1598,
+      "power": 118.0,
+      "seats": 4,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 24
+    },
+    "Mini Countryman": {
+      "mileage": 16.6,
+      "engine": 1998,
+      "power": 112.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Mitsubishi Cedia": {
+      "mileage": 13.17,
+      "engine": 1999,
+      "power": 114.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Mitsubishi Lancer": {
+      "mileage": 14.25,
+      "engine": 1733,
+      "power": 76.9,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Mitsubishi Montero": {
+      "mileage": 11.56,
+      "engine": 3200,
+      "power": 199.3,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Mitsubishi Outlander": {
+      "mileage": 11.3,
+      "engine": 2360,
+      "power": 170.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Mitsubishi Pajero": {
+      "mileage": 12.0,
+      "engine": 2656,
+      "power": 147.1,
+      "seats": 6,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 20
+    },
+    "Nissan Evalia": {
+      "mileage": 19.3,
+      "engine": 1461,
+      "power": 84.8,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Nissan Micra": {
+      "mileage": 19.69,
+      "engine": 1198,
+      "power": 67.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 33
+    },
+    "Nissan Sunny": {
+      "mileage": 21.64,
+      "engine": 1461,
+      "power": 84.8,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 26
+    },
+    "Nissan Teana": {
+      "mileage": 10.09,
+      "engine": 2422,
+      "power": 179.5,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Nissan Terrano": {
+      "mileage": 19.01,
+      "engine": 1461,
+      "power": 108.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 26
+    },
+    "Nissan X-Trail": {
+      "mileage": 14.42,
+      "engine": 1995,
+      "power": 147.6,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Porsche Boxster": {
+      "mileage": 8.6,
+      "engine": 2706,
+      "power": 265.0,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Porsche Cayenne": {
+      "mileage": 13.6,
+      "engine": 2995,
+      "power": 340.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 7
+    },
+    "Porsche Cayman": {
+      "mileage": 9.0,
+      "engine": 3436,
+      "power": 90.0,
+      "seats": 2,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Porsche Panamera": {
+      "mileage": 17.85,
+      "engine": 2967,
+      "power": 300.0,
+      "seats": 4,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 8
+    },
+    "Renault Captur": {
+      "mileage": 20.37,
+      "engine": 1461,
+      "power": 108.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Renault Duster": {
+      "mileage": 19.6,
+      "engine": 1461,
+      "power": 108.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 83
+    },
+    "Renault Fluence": {
+      "mileage": 21.1,
+      "engine": 1461,
+      "power": 93.2,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Renault KWID": {
+      "mileage": 25.17,
+      "engine": 799,
+      "power": 53.3,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 40
+    },
+    "Renault Koleos": {
+      "mileage": 13.73,
+      "engine": 1995,
+      "power": 148.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 3
+    },
+    "Renault Lodgy": {
+      "mileage": 19.98,
+      "engine": 1461,
+      "power": 108.5,
+      "seats": 8,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 2
+    },
+    "Renault Pulse": {
+      "mileage": 23.08,
+      "engine": 1461,
+      "power": 63.1,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Renault Scala": {
+      "mileage": 21.64,
+      "engine": 1461,
+      "power": 84.8,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Skoda Fabia": {
+      "mileage": 17.5,
+      "engine": 1198,
+      "power": 75.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 11
+    },
+    "Skoda Laura": {
+      "mileage": 17.5,
+      "engine": 1896,
+      "power": 108.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 29
+    },
+    "Skoda Octavia": {
+      "mileage": 18.7,
+      "engine": 1896,
+      "power": 141.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 31
+    },
+    "Skoda Rapid": {
+      "mileage": 20.5,
+      "engine": 1598,
+      "power": 103.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 47
+    },
+    "Skoda Superb": {
+      "mileage": 13.7,
+      "engine": 1798,
+      "power": 157.8,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 49
+    },
+    "Skoda Yeti": {
+      "mileage": 17.7,
+      "engine": 1968,
+      "power": 123.3,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 6
+    },
+    "Smart Fortwo": {
+      "mileage": 18.0,
+      "engine": 799,
+      "power": 90.0,
+      "seats": 2,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Tata Bolt": {
+      "mileage": 22.95,
+      "engine": 1248,
+      "power": 74.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Tata Hexa": {
+      "mileage": 17.6,
+      "engine": 2179,
+      "power": 153.9,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 4
+    },
+    "Tata Indica": {
+      "mileage": 19.25,
+      "engine": 1396,
+      "power": 69.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 40
+    },
+    "Tata Indigo": {
+      "mileage": 17.0,
+      "engine": 1396,
+      "power": 69.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 31
+    },
+    "Tata Manza": {
+      "mileage": 21.02,
+      "engine": 1248,
+      "power": 88.8,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 16
+    },
+    "Tata Nano": {
+      "mileage": 25.4,
+      "engine": 624,
+      "power": 37.5,
+      "seats": 4,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 25
+    },
+    "Tata New": {
+      "mileage": 13.93,
+      "engine": 2179,
+      "power": 138.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 8
+    },
+    "Tata Nexon": {
+      "mileage": 21.5,
+      "engine": 1497,
+      "power": 108.5,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Tata Safari": {
+      "mileage": 14.0,
+      "engine": 2179,
+      "power": 138.1,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 9
+    },
+    "Tata Sumo": {
+      "mileage": 14.07,
+      "engine": 2956,
+      "power": 83.1,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Tata Tiago": {
+      "mileage": 23.84,
+      "engine": 1199,
+      "power": 84.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 11
+    },
+    "Tata Tigor": {
+      "mileage": 24.7,
+      "engine": 1047,
+      "power": 69.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 5
+    },
+    "Tata Venture": {
+      "mileage": 15.42,
+      "engine": 1405,
+      "power": 70.0,
+      "seats": 8,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Tata Xenon": {
+      "mileage": 13.49,
+      "engine": 2179,
+      "power": 138.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 3
+    },
+    "Tata Zest": {
+      "mileage": 17.57,
+      "engine": 1193,
+      "power": 88.7,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 21
+    },
+    "Toyota Camry": {
+      "mileage": 19.16,
+      "engine": 2494,
+      "power": 158.2,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 11
+    },
+    "Toyota Corolla": {
+      "mileage": 14.53,
+      "engine": 1798,
+      "power": 138.0,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 68
+    },
+    "Toyota Etios": {
+      "mileage": 23.59,
+      "engine": 1364,
+      "power": 78.9,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 61
+    },
+    "Toyota Fortuner": {
+      "mileage": 12.55,
+      "engine": 2982,
+      "power": 169.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 101
+    },
+    "Toyota Innova": {
+      "mileage": 12.8,
+      "engine": 2494,
+      "power": 102.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 164
+    },
+    "Toyota Platinum": {
+      "mileage": 23.59,
+      "engine": 1364,
+      "power": 67.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 1
+    },
+    "Toyota Prius": {
+      "mileage": 18.0,
+      "engine": 1798,
+      "power": 73.0,
+      "seats": 5,
+      "default_fuel": "Electric",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Toyota Qualis": {
+      "mileage": 13.1,
+      "engine": 2446,
+      "power": 75.0,
+      "seats": 10,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Volkswagen Ameo": {
+      "mileage": 17.0,
+      "engine": 1198,
+      "power": 73.8,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 19
+    },
+    "Volkswagen Beetle": {
+      "mileage": 10.98,
+      "engine": 1984,
+      "power": 114.4,
+      "seats": 4,
+      "default_fuel": "Petrol",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Volkswagen CrossPolo": {
+      "mileage": 20.14,
+      "engine": 1498,
+      "power": 88.6,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 4
+    },
+    "Volkswagen Jetta": {
+      "mileage": 16.96,
+      "engine": 1968,
+      "power": 138.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 24
+    },
+    "Volkswagen Passat": {
+      "mileage": 18.33,
+      "engine": 1968,
+      "power": 167.7,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 8
+    },
+    "Volkswagen Polo": {
+      "mileage": 17.21,
+      "engine": 1199,
+      "power": 73.9,
+      "seats": 5,
+      "default_fuel": "Petrol",
+      "default_transmission": "Manual",
+      "sample_count": 151
+    },
+    "Volkswagen Tiguan": {
+      "mileage": 17.06,
+      "engine": 1968,
+      "power": 141.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 1
+    },
+    "Volkswagen Vento": {
+      "mileage": 20.34,
+      "engine": 1598,
+      "power": 103.6,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Manual",
+      "sample_count": 107
+    },
+    "Volvo S60": {
+      "mileage": 13.2,
+      "engine": 1984,
+      "power": 181.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 7
+    },
+    "Volvo S80": {
+      "mileage": 14.55,
+      "engine": 2400,
+      "power": 215.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    },
+    "Volvo V40": {
+      "mileage": 20.05,
+      "engine": 1984,
+      "power": 150.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 4
+    },
+    "Volvo XC60": {
+      "mileage": 13.5,
+      "engine": 2400,
+      "power": 215.0,
+      "seats": 5,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 6
+    },
+    "Volvo XC90": {
+      "mileage": 11.1,
+      "engine": 2400,
+      "power": 200.0,
+      "seats": 7,
+      "default_fuel": "Diesel",
+      "default_transmission": "Automatic",
+      "sample_count": 2
+    }
+  },
+  "global_defaults": {
+    "mileage": 18.2,
+    "engine": 1493.0,
+    "power": 97.7,
+    "seats": 5,
+    "location": "Mumbai",
+    "transmission": "Manual",
+    "owner_type": "First"
+  }
+}

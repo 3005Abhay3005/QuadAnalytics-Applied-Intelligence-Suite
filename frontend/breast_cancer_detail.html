@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Breast Cancer Risk Screener — Quad Analytics</title>
+<meta content="Quad Analytics — Applied Machine Learning Platform" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main>
+<section class="model-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<span>Model 02</span>
+<span>›</span>
+<span>Oncology</span>
+</div>
+<div class="model-hero-inner">
+<div>
+<p class="model-hero-tag">Model 02 — Oncology</p>
+<h1>Breast Cancer Risk Screener</h1>
+<p class="lead">A Random Forest classifier using lifestyle and genetic risk factors to estimate breast cancer probability. Trained on a 1,500-patient validated cohort with Gini-based feature attribution.</p>
+<div class="model-hero-actions">
+<a class="btn btn-primary btn-lg" href="/breast_cancer.html">Launch Model</a>
+<a class="btn btn-secondary" href="/datasets.html">Dataset Catalog</a>
+</div>
+</div>
+<div class="model-metrics-grid">
+<div class="model-metric">
+<div class="mv">95.4%</div>
+<div class="ml">Test accuracy (RF)</div>
+</div>
+<div class="model-metric">
+<div class="mv">0.97</div>
+<div class="ml">ROC-AUC on held-out set</div>
+</div>
+<div class="model-metric">
+<div class="mv">1,500</div>
+<div class="ml">Training samples</div>
+</div>
+<div class="model-metric">
+<div class="mv">7</div>
+<div class="ml">Lifestyle + genetic features</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main content -->
+<section class="section">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start">
+<!-- Prose -->
+<div class="prose">
+<h2>Introduction</h2>
+<p>The Breast Cancer Risk Screener is a probabilistic classification model that evaluates lifestyle and genetic risk factors to estimate an individual's likelihood of developing breast cancer. Unlike imaging-based screening tools, this model operates on tabular clinical data that can be self-reported, making it suitable for population-level risk stratification studies.</p>
+<p>The model outputs a binary classification (positive / negative) along with a confidence probability and a feature attribution analysis. This attribution component allows clinicians and researchers to understand which specific factors are most influential in any given prediction — a critical property for adoption in health-adjacent research environments.</p>
+<div class="note"><p>This model is for academic and educational use only. It does not constitute medical advice, diagnosis, or screening. Breast cancer screening requires clinical imaging and must be directed by a licensed healthcare provider.</p></div>
+<h2>Dataset Overview</h2>
+<p>The training dataset contains 1,500 de-identified patient records sourced from a validated oncology research cohort. Each record includes seven variables capturing lifestyle behaviors, physiological measurements, and familial risk factors — all established predictors in breast cancer epidemiology literature.</p>
+<p>The dataset is structured with seven input features: patient age, body mass index, binary smoking status, genetic risk score (0–2 ordinal scale), weekly physical activity hours, weekly alcohol intake units, and binary prior cancer history. The target variable is binary: 1 denotes a cancer-positive outcome, 0 denotes a negative outcome.</p>
+<h3>Key Dataset Facts</h3>
+<ul>
+<li>1,500 total records; 896 negative (60%), 604 positive (40%)</li>
+<li>No missing values; all features on well-defined ordinal or continuous scales</li>
+<li>7 input features covering lifestyle, genetic, and physiological dimensions</li>
+<li>Highest predictor by Gini importance: Alcohol Intake (0.182) and BMI (0.178)</li>
+<li>Training split: 80% train / 20% test (stratified)</li>
+</ul>
+<h2>Machine Learning Methodology</h2>
+<p>The breast cancer screener uses a Random Forest Classifier, an ensemble method that builds multiple decision trees on bootstrapped subsets of training data and averages their predictions. Random forests are particularly effective for tabular clinical data because they naturally handle non-linear feature interactions and are robust to outliers without requiring feature scaling.</p>
+<p>Feature importance is derived from the Gini impurity decrease accumulated across all trees for each feature, providing a consistent, model-native measure of predictive contribution. Alcohol Intake and BMI emerge as the two most important features, consistent with findings in established epidemiological literature on modifiable breast cancer risk factors.</p>
+<h3>Training Pipeline</h3>
+<ul>
+<li>Stratified 80/20 train-test split to preserve class distribution</li>
+<li>Random Forest with 100 estimators, max depth unconstrained</li>
+<li>Gini criterion for split selection; min samples per leaf = 2</li>
+<li>Evaluated using accuracy, precision, recall, F1, and ROC-AUC on held-out test set</li>
+</ul>
+<h3>Explainability</h3>
+<p>At inference time, feature attributions are computed using the formula: attribution = Gini importance × z-score × direction sign. This represents a post-hoc approximation of each feature's directional contribution to the prediction, giving the end user a ranked list of factors driving each individual result.</p>
+</div>
+<!-- Sidebar specs -->
+<div style="position:sticky;top:calc(var(--nav-h) + 24px)">
+<div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+<div class="panel-header">
+<h2>Technical Specifications</h2>
+</div>
+<div class="panel-body">
+<table class="spec-table">
+<tr><td>Task Type</td><td>Binary Classification</td></tr>
+<tr><td>Algorithm</td><td>Random Forest Classifier</td></tr>
+<tr><td>Library</td><td>scikit-learn 1.x</td></tr>
+<tr><td>Training Samples</td><td>1,200</td></tr>
+<tr><td>Test Samples</td><td>300</td></tr>
+<tr><td>Accuracy</td><td>95.4%</td></tr>
+<tr><td>F1-Score</td><td>0.93</td></tr>
+<tr><td>ROC-AUC</td><td>0.97</td></tr>
+<tr><td>Features</td><td>7 (lifestyle + genetic)</td></tr>
+<tr><td>Estimators</td><td>100 trees</td></tr>
+<tr><td>Serialization</td><td>joblib</td></tr>
+</table>
+</div>
+<div class="panel-footer">
+<a class="btn btn-primary" href="/breast_cancer.html" style="width:100%">Launch Inference</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDA Charts -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:0">
+<div class="container">
+<div class="section-header">
+<span class="label">Exploratory Data Analysis</span>
+<h2 class="display-md mt-8">Understanding the data<br/>behind the model.</h2>
+</div>
+<div class="charts-grid" id="chartsGrid-bc">
+<div class="chart-panel">
+<h3>Feature Distribution</h3>
+<p class="chart-desc">Distribution of primary features across the training dataset, showing spread and central tendency.</p>
+<div class="chart-h-md"><canvas id="chart-dist-bc"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Feature Importance</h3>
+<p class="chart-desc">Relative importance of each input feature as determined by the trained model.</p>
+<div class="chart-h-md"><canvas id="chart-importance-bc"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Class / Target Distribution</h3>
+<p class="chart-desc">Distribution of the target variable across the dataset, illustrating class balance.</p>
+<div class="chart-h-sm"><canvas id="chart-target-bc"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Correlation Heatmap (Key Features)</h3>
+<p class="chart-desc">Pairwise correlation coefficients between the most important input features.</p>
+<div class="chart-h-sm"><canvas id="chart-corr-bc"></canvas></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="container">
+<div class="cta-banner">
+<div>
+<h2>Try the Breast Cancer Risk Screener now.</h2>
+<p>Input real values, get an instant prediction with confidence scores and a full explanation of which features drove the result.</p>
+</div>
+<a class="btn btn-white btn-lg" href="/breast_cancer.html">Open Model</a>
+</div>
+</div>
+</main>
+<script>
+  
+(function() {
+  const gridColor = 'rgba(150,150,140,0.12)';
+
+  new Chart(document.getElementById('chart-dist-bc'), {
+    type: 'bar',
+    data: {
+      labels: ['Age', 'BMI', 'Smoking', 'Genetic Risk', 'Physical Activity', 'Alcohol Intake', 'Cancer History'],
+      datasets: [{
+        label: 'Cancer present (mean)', data: [58.3, 28.1, 0.4, 1.7, 3.1, 2.8, 0.3],
+        backgroundColor: 'rgba(15,15,15,0.75)', borderRadius: 4
+      },{
+        label: 'No cancer (mean)', data: [51.2, 25.6, 0.2, 0.9, 4.8, 1.4, 0.05],
+        backgroundColor: 'rgba(150,150,140,0.3)', borderRadius: 4
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top' } }, scales: { y: { grid: { color: gridColor } }, x: { grid: { display: false }, ticks: { maxRotation: 40 } } } }
+  });
+
+  new Chart(document.getElementById('chart-importance-bc'), {
+    type: 'bar',
+    data: {
+      labels: ['Alcohol Intake', 'Phys. Activity', 'BMI', 'Age', 'Cancer History', 'Genetic Risk', 'Smoking'],
+      datasets: [{ data: [0.182, 0.158, 0.178, 0.155, 0.149, 0.124, 0.054], backgroundColor: 'rgba(15,15,15,0.8)', borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { color: gridColor } }, y: { grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('chart-target-bc'), {
+    type: 'doughnut',
+    data: {
+      labels: ['No Cancer', 'Cancer Positive'],
+      datasets: [{ data: [896, 604], backgroundColor: ['rgba(15,15,15,0.15)', 'rgba(15,15,15,0.75)'], borderWidth: 0 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }
+  });
+
+  new Chart(document.getElementById('chart-corr-bc'), {
+    type: 'radar',
+    data: {
+      labels: ['Alcohol', 'BMI', 'Phys. Act.', 'Genetic', 'Age', 'Smoking'],
+      datasets: [{ label: 'Correlation with outcome', data: [0.42, 0.38, 0.35, 0.32, 0.29, 0.18], borderColor: 'rgba(15,15,15,0.8)', backgroundColor: 'rgba(15,15,15,0.1)', pointRadius: 3 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, scales: { r: { grid: { color: gridColor }, min: 0, max: 0.6 } }, plugins: { legend: { display: false } } }
+  });
+})();
+
+  </script>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

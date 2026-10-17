@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Used Car Price Valuation — Quad Analytics</title>
+<meta content="Used Car Price Valuation on Quad Analytics" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main class="container">
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<a href="/car_price_detail.html">Model 03 — Automotive Valuation</a>
+<span>›</span>
+<span>Inference Sandbox</span>
+</div>
+<h1 class="display-md">Used Car Price Estimator</h1>
+<p class="body-sm mt-8">Predict fair pre-owned vehicle market values based on make, age, mileage, and powertrain. <a href="/car_price_detail.html" style="text-decoration:underline">Read full methodology and dataset overview →</a></p>
+</div>
+<div class="inference-layout">
+<!-- Form Sidebar -->
+<div class="inference-sidebar">
+<div class="inference-panel">
+<div class="panel-header">
+<h2>Vehicle Specifications</h2>
+<p>Trained on 6,019 Indian marketplace transaction records</p>
+</div>
+<div class="panel-body">
+<div class="presets-bar">
+<button class="preset-btn" id="fill-sample" type="button">Load Typical Listing</button>
+</div>
+<form id="car-form">
+<!-- Company -->
+<div class="field">
+<label for="company">Manufacturer / Brand</label>
+<select class="field-select" id="company" required=""></select>
+<div class="range-hint"><span>30+ automotive OEMs</span><span>Catalog</span></div>
+</div>
+<!-- Name -->
+<div class="field">
+<label for="name">Vehicle Model Series</label>
+<select class="field-select" id="name" required=""></select>
+<div class="range-hint"><span>Filtered dynamically by selected brand</span><span>Series</span></div>
+</div>
+<!-- Year -->
+<div class="field">
+<label for="year">Year of Manufacture</label>
+<div class="slider-row">
+<input class="field-slider" id="slider-year" max="2024" min="2000" step="1" type="range" value="2017"/>
+<input class="field-number" id="year" max="2024" min="2000" required="" step="1" type="number" value="2017"/>
+</div>
+<div class="range-hint"><span>Production year (determines asset age)</span><span>Registration</span></div>
+</div>
+<!-- Kms Driven -->
+<div class="field">
+<label for="kms_driven">Odometer Mileage <span class="text-dim" style="font-weight:400;font-size:0.75rem">km</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-kms_driven" max="250000" min="500" step="1000" type="range" value="45000"/>
+<input class="field-number" id="kms_driven" max="250000" min="500" required="" step="500" type="number" value="45000"/>
+</div>
+<div class="range-hint"><span>Total verified odometer distance</span><span>Usage</span></div>
+</div>
+<!-- Fuel Type -->
+<div class="field">
+<label for="fuel_type">Powertrain / Fuel Type</label>
+<select class="field-select" id="fuel_type" required=""></select>
+<div class="range-hint"><span>Petrol · Diesel · CNG · LPG · Electric</span><span>Fuel</span></div>
+</div>
+<!-- Transmission -->
+<div class="field">
+<label for="transmission">Transmission Drivetrain</label>
+<select class="field-select" id="transmission"></select>
+<div class="range-hint"><span>Manual · Automatic</span><span>Gearbox</span></div>
+</div>
+<!-- Location -->
+<div class="field">
+<label for="location">Metropolitan Market / City</label>
+<select class="field-select" id="location"></select>
+<div class="range-hint"><span>Regional liquidity & market index</span><span>Market</span></div>
+</div>
+<div class="error-msg" id="api-error"></div>
+<div class="mt-24">
+<button class="btn btn-primary" id="car-submit" style="width:100%" type="submit">
+<span class="btn-default-text">Estimate Market Value</span>
+<span class="btn-loading-text">Computing Valuation...</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Result Panel -->
+<div>
+<div class="result-main">
+<div class="result-empty" id="result-empty">
+<h3>Ready for Vehicle Valuation</h3>
+<p>Select manufacturer and odometer details to calculate fair market residual valuation.</p>
+</div>
+<div class="result-body" id="result-body">
+<span class="label">Valuation Estimate</span>
+<div class="result-verdict mt-8" id="result-value">—</div>
+<div class="result-sub" id="result-sublabel">Estimated Fair Market Valuation</div>
+<hr class="result-divider"/>
+<div class="result-section-title">Valuation Gauge</div>
+<div class="result-chart-h">
+<canvas id="result-chart"></canvas>
+</div>
+<hr class="result-divider"/>
+<div class="result-section-title">Valuation Drivers — Feature Contributions</div>
+<p class="body-sm mb-16">Relative pricing drivers based on vehicle age depreciation, odometer readings, and brand positioning.</p>
+<div class="attribution-chart-h">
+<canvas id="attribution-chart"></canvas>
+</div>
+<div class="result-disclaimer">
+              Notice: Valuations are generated via Random Forest Regression trained on historical listings from the Quikr automotive portal. Actual transaction prices depend on physical inspection and geographic market condition.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

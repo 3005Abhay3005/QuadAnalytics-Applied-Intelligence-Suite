@@ -1,0 +1,55 @@
+# ─── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyw
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg-link
+
+# ─── Virtual Environments ───────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+.python-version
+
+# ─── Trained Model Artifacts (.pkl) ─────────────────────────────────────────────
+# These are too large for GitHub. Regenerate them by running:
+#   python models/diabetes/train.py
+#   python models/breast_cancer/train.py
+#   python models/car_price/train.py
+#   python models/ipl_score/train.py
+models/**/*.pkl
+
+# ─── Environment Variables / Secrets ────────────────────────────────────────────
+.env
+.env.*
+*.secret
+
+# ─── IDE / Editor ───────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── OS Files ───────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Pytest / Coverage ──────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# ─── Jupyter Notebooks (temp files) ─────────────────────────────────────────────
+.ipynb_checkpoints/

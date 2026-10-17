@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IPL Score Forecaster — Quad Analytics</title>
+<meta content="IPL Score Forecaster on Quad Analytics" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main class="container">
+<div class="page-hero">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<a href="/ipl_detail.html">Model 04 — Sports Analytics</a>
+<span>›</span>
+<span>Inference Sandbox</span>
+</div>
+<h1 class="display-md">IPL Score Forecaster</h1>
+<p class="body-sm mt-8">Forecast first-innings match totals from live match state telemetry. <a href="/ipl_detail.html" style="text-decoration:underline">Read full methodology and dataset overview →</a></p>
+</div>
+<div class="inference-layout">
+<!-- Form Sidebar -->
+<div class="inference-sidebar">
+<div class="inference-panel">
+<div class="panel-header">
+<h2>Live Match State</h2>
+<p>Trained on 76,000+ ball-by-ball delivery events</p>
+</div>
+<div class="panel-body">
+<div class="presets-bar">
+<button class="preset-btn" id="fill-sample" type="button">Load Match Scenario</button>
+</div>
+<form id="ipl-form">
+<div class="field-group">
+<div class="field">
+<label for="batting_team">Batting Team</label>
+<select class="field-select" id="batting_team" required=""></select>
+</div>
+<div class="field">
+<label for="bowling_team">Bowling Team</label>
+<select class="field-select" id="bowling_team" required=""></select>
+</div>
+</div>
+<!-- Overs -->
+<div class="field">
+<label for="overs">Overs Completed <span class="text-dim" style="font-weight:400;font-size:0.75rem">5.0 – 19.0</span></label>
+<div class="slider-row">
+<input class="field-slider" id="slider-overs" max="19.0" min="5.0" step="0.1" type="range" value="10.2"/>
+<input class="field-number" id="overs" max="19.0" min="5.0" required="" step="0.1" type="number" value="10.2"/>
+</div>
+<div class="range-hint"><span>Innings progress snapshot</span><span>Over number</span></div>
+</div>
+<!-- Runs & Wickets -->
+<div class="field-group">
+<div class="field">
+<label for="runs">Total Runs</label>
+<div class="slider-row">
+<input class="field-slider" id="slider-runs" max="260" min="20" step="1" type="range" value="85"/>
+<input class="field-number" id="runs" max="260" min="20" required="" step="1" type="number" value="85"/>
+</div>
+</div>
+<div class="field">
+<label for="wickets">Wickets Lost</label>
+<div class="slider-row">
+<input class="field-slider" id="slider-wickets" max="9" min="0" step="1" type="range" value="2"/>
+<input class="field-number" id="wickets" max="9" min="0" required="" step="1" type="number" value="2"/>
+</div>
+</div>
+</div>
+<!-- Last 5 overs -->
+<div class="field-group">
+<div class="field">
+<label for="runs_last_5">Runs in Last 5 Overs</label>
+<div class="slider-row">
+<input class="field-slider" id="slider-runs_last_5" max="90" min="10" step="1" type="range" value="46"/>
+<input class="field-number" id="runs_last_5" max="90" min="10" required="" step="1" type="number" value="46"/>
+</div>
+</div>
+<div class="field">
+<label for="wickets_last_5">Wickets in Last 5 Overs</label>
+<div class="slider-row">
+<input class="field-slider" id="slider-wickets_last_5" max="5" min="0" step="1" type="range" value="1"/>
+<input class="field-number" id="wickets_last_5" max="5" min="0" required="" step="1" type="number" value="1"/>
+</div>
+</div>
+</div>
+<div class="error-msg" id="api-error"></div>
+<div class="mt-24">
+<button class="btn btn-primary" id="ipl-submit" style="width:100%" type="submit">
+<span class="btn-default-text">Project Final Score</span>
+<span class="btn-loading-text">Forecasting Total...</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Result Panel -->
+<div>
+<div class="result-main">
+<div class="result-empty" id="result-empty">
+<h3>Ready for Match Projection</h3>
+<p>Enter current match telemetry to project expected 20-over first innings score.</p>
+</div>
+<div class="result-body" id="result-body">
+<span class="label">Projected Total</span>
+<div class="result-verdict mt-8" id="result-value">—</div>
+<div class="result-sub" id="result-sublabel">Projected 1st Innings Total (20 Overs)</div>
+<hr class="result-divider"/>
+<div class="result-section-title">Score Horizon Gauge</div>
+<div class="result-chart-h">
+<canvas id="result-chart"></canvas>
+</div>
+<hr class="result-divider"/>
+<div class="result-section-title">Projection Attribution Breakdown</div>
+<p class="body-sm mb-16">Key match drivers: Current run rate momentum, remaining overs resource, and wickets in hand.</p>
+<div class="attribution-chart-h">
+<canvas id="attribution-chart"></canvas>
+</div>
+<div class="result-disclaimer">
+              Notice: Score projections are generated via Random Forest Regression trained on historical IPL delivery records. Weather, pitch wear, and extraordinary death-over hitting may shift outcomes.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>

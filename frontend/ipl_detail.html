@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IPL Score Forecaster — Quad Analytics</title>
+<meta content="Quad Analytics — Applied Machine Learning Platform" name="description"/>
+<link href="/css/style.css?v=3" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="/assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-header-inner">
+<a class="site-logo" href="/index.html">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<div class="site-logo-text">
+<span class="site-logo-name">Quad Analytics</span>
+<span class="site-logo-sub">Applied Intelligence Suite</span>
+</div>
+</a>
+<nav class="site-nav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<div class="site-header-right">
+<button class="theme-btn" id="themeToggle" title="Toggle theme">
+<svg fill="none" height="16" id="iconSun" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+<svg fill="none" height="16" id="iconMoon" stroke="currentColor" stroke-width="2" style="display:none" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<button class="menu-btn" id="menuBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+<a href="/index.html">Platform</a>
+<a href="/datasets.html">Datasets</a>
+<a href="/compare.html">Benchmarks</a>
+</nav>
+<main>
+<section class="model-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="/index.html">Platform</a>
+<span>›</span>
+<span>Model 04</span>
+<span>›</span>
+<span>Sports Analytics</span>
+</div>
+<div class="model-hero-inner">
+<div>
+<p class="model-hero-tag">Model 04 — Sports Analytics</p>
+<h1>IPL Score Forecaster</h1>
+<p class="lead">A regression model trained on 76,000+ IPL deliveries that estimates first-innings totals from live match state: batting team, bowling team, current run rate, wickets fallen, and overs bowled.</p>
+<div class="model-hero-actions">
+<a class="btn btn-primary btn-lg" href="/ipl_score.html">Launch Model</a>
+<a class="btn btn-secondary" href="/datasets.html">Dataset Catalog</a>
+</div>
+</div>
+<div class="model-metrics-grid">
+<div class="model-metric">
+<div class="mv">~8.2</div>
+<div class="ml">Mean absolute error (runs)</div>
+</div>
+<div class="model-metric">
+<div class="mv">0.85</div>
+<div class="ml">R² on held-out test</div>
+</div>
+<div class="model-metric">
+<div class="mv">76K+</div>
+<div class="ml">Raw delivery records</div>
+</div>
+<div class="model-metric">
+<div class="mv">5</div>
+<div class="ml">Match state features</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main content -->
+<section class="section">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start">
+<!-- Prose -->
+<div class="prose">
+<h2>Introduction</h2>
+<p>The IPL Score Forecaster is a regression model that predicts the final first-innings total of an Indian Premier League cricket match given the match state at any mid-innings snapshot. It enables live score projection, which has applications in broadcast analytics, sports betting models, team strategy optimization, and fan engagement platforms.</p>
+<p>The model operates on five features that capture the complete match state: batting team identity, bowling team identity, current run rate, wickets lost, and overs bowled. It was trained on a large corpus of historical IPL deliveries to learn the complex, non-linear relationships between match context and eventual total.</p>
+<h2>Dataset Overview</h2>
+<p>The training dataset is sourced from Kaggle's comprehensive IPL dataset containing ball-by-ball delivery records from the 2008–2019 seasons. The raw dataset contains 76,014 rows, each representing a single delivery event. For training purposes, a snapshot approach was used: each row of training data represents a match state at a specific over within the first innings.</p>
+<p>Features were engineered from the raw delivery log: current run rate (runs scored / overs bowled), wickets fallen at snapshot time, overs bowled, and team encoding. The target variable is the eventual first-innings total for that match. Team names are encoded as categorical variables using the fitted <code>teams.pkl</code> label encoder.</p>
+<h3>Key Dataset Facts</h3>
+<ul>
+<li>76,014 raw delivery records; 3,000 rows used for efficient training</li>
+<li>8 IPL franchise teams encoded as categorical features</li>
+<li>Typical first-innings totals range from 130 to 200+ runs</li>
+<li>Highest correlation to final score: Current Run Rate (r = 0.82)</li>
+<li>Training split: 80% train / 20% test</li>
+</ul>
+<h2>Machine Learning Methodology</h2>
+<p>The model uses a Random Forest Regressor, which handles the non-linear interaction between match state features effectively. Cricket score prediction is inherently non-linear: a team at 100/2 after 10 overs will score very differently from a team at 100/8 after 10 overs, despite identical CRR — demonstrating why tree-based models are well-suited over linear approaches.</p>
+<p>Team effects are captured through categorical encoding. The model learns team-specific scoring tendencies through the interaction of batting and bowling team encodings with other features — effectively building team-specific scoring curves implicitly within the ensemble structure.</p>
+<h3>Training Pipeline</h3>
+<ul>
+<li>Delivery-level aggregation to produce per-snapshot training rows</li>
+<li>LabelEncoding for batting team and bowling team</li>
+<li>Random Forest Regressor with 100 estimators</li>
+<li>Evaluated on held-out test set using MAE, RMSE, and R²</li>
+</ul>
+<h3>Inference Logic</h3>
+<p>At prediction time, the user provides the current match state. The model processes team encodings through the fitted <code>teams.pkl</code> LabelEncoder, constructs the feature vector, and produces an estimated final score. Feature attribution is hand-computed from the model's structure: current run rate is the dominant factor with an estimated 52% contribution, followed by overs remaining (21%) and wickets (16%).</p>
+</div>
+<!-- Sidebar specs -->
+<div style="position:sticky;top:calc(var(--nav-h) + 24px)">
+<div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+<div class="panel-header">
+<h2>Technical Specifications</h2>
+</div>
+<div class="panel-body">
+<table class="spec-table">
+<tr><td>Task Type</td><td>Regression</td></tr>
+<tr><td>Algorithm</td><td>Random Forest Regressor</td></tr>
+<tr><td>Library</td><td>scikit-learn 1.x</td></tr>
+<tr><td>Training Rows</td><td>2,400 (from 3,000 cap)</td></tr>
+<tr><td>Test Rows</td><td>600</td></tr>
+<tr><td>MAE</td><td>~8.2 runs</td></tr>
+<tr><td>R²</td><td>0.85</td></tr>
+<tr><td>Features</td><td>5 (teams, CRR, wickets, overs)</td></tr>
+<tr><td>Estimators</td><td>100 trees</td></tr>
+<tr><td>Team Encoding</td><td>LabelEncoder (teams.pkl)</td></tr>
+<tr><td>Serialization</td><td>joblib</td></tr>
+</table>
+</div>
+<div class="panel-footer">
+<a class="btn btn-primary" href="/ipl_score.html" style="width:100%">Launch Inference</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EDA Charts -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:0">
+<div class="container">
+<div class="section-header">
+<span class="label">Exploratory Data Analysis</span>
+<h2 class="display-md mt-8">Understanding the data<br/>behind the model.</h2>
+</div>
+<div class="charts-grid" id="chartsGrid-ipl">
+<div class="chart-panel">
+<h3>Feature Distribution</h3>
+<p class="chart-desc">Distribution of primary features across the training dataset, showing spread and central tendency.</p>
+<div class="chart-h-md"><canvas id="chart-dist-ipl"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Feature Importance</h3>
+<p class="chart-desc">Relative importance of each input feature as determined by the trained model.</p>
+<div class="chart-h-md"><canvas id="chart-importance-ipl"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Class / Target Distribution</h3>
+<p class="chart-desc">Distribution of the target variable across the dataset, illustrating class balance.</p>
+<div class="chart-h-sm"><canvas id="chart-target-ipl"></canvas></div>
+</div>
+<div class="chart-panel">
+<h3>Correlation Heatmap (Key Features)</h3>
+<p class="chart-desc">Pairwise correlation coefficients between the most important input features.</p>
+<div class="chart-h-sm"><canvas id="chart-corr-ipl"></canvas></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="container">
+<div class="cta-banner">
+<div>
+<h2>Try the IPL Score Forecaster now.</h2>
+<p>Input real values, get an instant prediction with confidence scores and a full explanation of which features drove the result.</p>
+</div>
+<a class="btn btn-white btn-lg" href="/ipl_score.html">Open Model</a>
+</div>
+</div>
+</main>
+<script>
+  
+(function() {
+  const gridColor = 'rgba(150,150,140,0.12)';
+
+  new Chart(document.getElementById('chart-dist-ipl'), {
+    type: 'bar',
+    data: {
+      labels: ['CSK', 'MI', 'RCB', 'KKR', 'DC', 'SRH', 'RR', 'KXIP'],
+      datasets: [{
+        label: 'Avg. 1st innings total', data: [169, 172, 163, 165, 158, 160, 156, 154],
+        backgroundColor: 'rgba(15,15,15,0.75)', borderRadius: 4
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 140, grid: { color: gridColor } }, x: { grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('chart-importance-ipl'), {
+    type: 'bar',
+    data: {
+      labels: ['Current Run Rate', 'Overs Left', 'Wickets Lost', 'Batting Team', 'Bowling Team'],
+      datasets: [{ data: [0.52, 0.21, 0.16, 0.07, 0.04], backgroundColor: 'rgba(15,15,15,0.8)', borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { color: gridColor } }, y: { grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('chart-target-ipl'), {
+    type: 'bar',
+    data: {
+      labels: ['< 130', '130-149', '150-169', '170-189', '190-209', '210+'],
+      datasets: [{ label: 'Matches', data: [420, 1840, 3210, 2890, 1640, 780], backgroundColor: 'rgba(15,15,15,0.7)', borderRadius: 4 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: gridColor } }, x: { grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('chart-corr-ipl'), {
+    type: 'radar',
+    data: {
+      labels: ['CRR', 'Wickets', 'Overs', 'Batting Team', 'Bowling Team'],
+      datasets: [{ label: 'Correlation with final score', data: [0.82, 0.46, 0.53, 0.21, 0.15], borderColor: 'rgba(15,15,15,0.8)', backgroundColor: 'rgba(15,15,15,0.1)', pointRadius: 3 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, scales: { r: { grid: { color: gridColor }, min: 0, max: 1 } }, plugins: { legend: { display: false } } }
+  });
+})();
+
+  </script>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-grid">
+<div class="footer-brand">
+<a class="site-logo" href="/index.html" style="margin-bottom:0">
+<div class="site-logo-mark"><img alt="Quad Analytics Logo" class="logo-img" src="/assets/logo.jpg"/></div>
+<span class="site-logo-name">Quad Analytics</span>
+</a>
+<p>An applied machine learning research platform with production-grade predictive models across healthcare, automotive, and sports domains.</p>
+</div>
+<div class="footer-col">
+<h4>Models</h4>
+<a href="/diabetes_detail.html">Diabetes Risk</a>
+<a href="/breast_cancer_detail.html">Oncology Screening</a>
+<a href="/car_price_detail.html">Car Valuation</a>
+<a href="/ipl_detail.html">IPL Forecaster</a>
+</div>
+<div class="footer-col">
+<h4>Platform</h4>
+<a href="/index.html">Overview</a>
+<a href="/compare.html">Benchmarks</a>
+<a href="/datasets.html">Datasets</a>
+</div>
+<div class="footer-col">
+<h4>Technical</h4>
+<a href="/compare.html">Model Metrics</a>
+<a href="https://scikit-learn.org" target="_blank">scikit-learn</a>
+<a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Quad Analytics — Academic Research Platform</span>
+<span>Built with FastAPI · scikit-learn · Chart.js</span>
+</div>
+</div>
+</footer>
+<script src="/js/app.js"></script>
+</body>
+</html>
